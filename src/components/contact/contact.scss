@@ -1,0 +1,17 @@
+.contact {
+    word-wrap: break-word;
+    font-size: 14px;
+    &--pending {
+        color: #777;
+        .block-title {
+            background-color: #ddd;
+            color: #555;
+        }
+    }
+}
+
+@media (min-width: 00px){
+    .contact {
+        font-size: 16px;
+    }
+}

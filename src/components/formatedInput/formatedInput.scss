@@ -1,0 +1,23 @@
+.form-item {
+    label {
+        display: block;
+        font-weight: 500;
+        font-size: inherit;
+    }
+    input {
+        display: block;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #999;
+        padding: 6px;
+        margin: 0 0 5px;
+        font-size: inherit;
+    }
+    &--error {
+        border-color: #ff0000;
+    }
+    .inline-error {
+        color: #ff0000;
+        font-size: 14px;
+    }
+}
