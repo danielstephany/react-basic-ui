@@ -1,5 +1,5 @@
 import React from 'react';
-import './blockTitle.scss';
+import styles from './blockTitle.scss';
 
 export default function BlockTitle(props){
     const blockTitleClasses = props.className ? `block-title ${props.className}` : 'block-title';

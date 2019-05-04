@@ -6,6 +6,8 @@ import MainContainer from 'components/mainContainer/mainContainer.js';
 import MainCol from 'components/mainCol/mainCol.js';
 import MainRow from 'components/mainRow/mainRow.js';
 import CardList from './containers/cardList/cardList.js';
+import DrawerContainer from 'components/drawerContainer/drawerContainer.js';
+import Drawer from 'components/drawer/drawer.js';
 
 class App extends Component {
   constructor(props){
@@ -29,8 +31,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <MainSection className="form-section">
+      <DrawerContainer>
+        <Drawer ref={(drawer) => { this.drawer = drawer }}>
+          test
+        </Drawer>
+        <MainSection className="form-section" onClick={() => { this.drawer.toggleDrawer() }}>
           <MainContainer>
             <MainRow>
               <MainCol sm="12" md="6" offset-md="3">
@@ -42,7 +47,7 @@ class App extends Component {
             </MainRow>
           </MainContainer>
         </MainSection>
-      </div>
+      </DrawerContainer>
     );
   }
 }

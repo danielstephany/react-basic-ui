@@ -1,3 +1,5 @@
+@import "../_themeStyles/colors.scss";
+
 .form-item {
     label {
         display: block;
@@ -14,10 +16,10 @@
         font-size: inherit;
     }
     &--error {
-        border-color: #ff0000;
+        border-color: $red;
     }
     .inline-error {
-        color: #ff0000;
+        color: $red;
         font-size: 14px;
     }
 }
