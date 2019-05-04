@@ -32,7 +32,7 @@ class App extends Component {
   render() {
     return (
       <DrawerContainer>
-        <Drawer ref={(drawer) => { this.drawer = drawer }}>
+        <Drawer slideFrom="right" ref={(drawer) => { this.drawer = drawer }}>
           test
         </Drawer>
         <MainSection className="form-section" onClick={() => { this.drawer.toggleDrawer() }}>
