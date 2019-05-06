@@ -8,34 +8,28 @@ class Drawer extends Component {
         this.state = {
             open: this.props.isOpen ? this.props.isOpen : false
         }
-    }
-
-    componentDidMount = () => {
-        this.overlay.addEventListener("touchmove", function(e){
-            e.preventDefault();
-        });
+        this.mainBodyElement = document.getElementsByTagName("body")[0];
+        this.mainHtmlElement = document.getElementsByTagName("html")[0];
     }
 
     toggleDrawer = () => {
         this.setState({open: !this.state.open});
-        console.log("test");
     }
 
-    setDrawerStyles = (slideFrom, transitionTime, maxWidth) => {
+    setDrawerStyles = (styleSetting) => {
         let drawerStyles = {};
 
-        if (slideFrom) {
-            if (slideFrom.toLowerCase() === "right") {
+        if (styleSetting.slideFrom) {
+            if (styleSetting.slideFrom.toLowerCase() === "right") {
                 drawerStyles.left = "auto";
                 drawerStyles.right = "0";
                 drawerStyles.transform = "translateX(100%)";
             }
         }
-        if (transitionTime) {
+        if (styleSetting.transitionTime) {
             drawerStyles.transitionDuration = (this.props.transitionTime / 1000) + "s";
-            console.log(drawerStyles.transitionDuration);
         }
-        if (maxWidth) {
+        if (styleSetting.maxWidth) {
             drawerStyles.maxWidth = this.props.maxWidth;
         }
         if (this.state.open) {
@@ -53,12 +47,28 @@ class Drawer extends Component {
         return overlayStyles;
     }
 
+    preventBodyScroll = (preventBodyScroll) => {
+        let scrollTop;
+        if ((preventBodyScroll === true) && this.state.open) {
+            scrollTop = this.mainHtmlElement.scrollTop;
+            this.mainHtmlElement.style.overflow = "hidden";
+            this.mainHtmlElement.scrollTop = scrollTop;
+        } else if ((preventBodyScroll === true) && !this.state.open) {
+            this.mainHtmlElement.style.overflow = "auto";
+        }
+    }
+
     getRef = refName => ref => this[refName] = ref;
 
     render(){
         let { className, slideFrom, transitionTime, maxWidth, preventBodyScroll, ...others} = this.props;
+        const styleSetting = {
+            slideFrom: slideFrom,
+            transitionTime: transitionTime,
+            maxWidth: maxWidth
+        }
         const drawerClasses = this.props.className ? `drawer ${this.props.className}` : 'drawer';
-        let drawerStyles = this.setDrawerStyles(slideFrom, transitionTime, maxWidth);
+        let drawerStyles = this.setDrawerStyles(styleSetting);
         let overlayStyles = this.setOverlayStyles();
         this.preventBodyScroll(preventBodyScroll);
 
