@@ -27,10 +27,10 @@ class Drawer extends Component {
             }
         }
         if (styleSetting.transitionTime) {
-            drawerStyles.transitionDuration = (this.props.transitionTime / 1000) + "s";
+            drawerStyles.transitionDuration = (styleSetting.transitionTime / 1000) + "s";
         }
         if (styleSetting.maxWidth) {
-            drawerStyles.maxWidth = this.props.maxWidth;
+            drawerStyles.maxWidth = styleSetting.maxWidth + "px";
         }
         if (this.state.open) {
             drawerStyles.transform = "translateX(0)";
@@ -86,8 +86,8 @@ class Drawer extends Component {
 Drawer.propTypes = {
     isOpen: PropTypes.bool,
     slideFrom: PropTypes.string,
-    transitionTime: PropTypes.number
-
+    transitionTime: PropTypes.number,
+    maxWidth: PropTypes.number
 }
 
 export default Drawer;
