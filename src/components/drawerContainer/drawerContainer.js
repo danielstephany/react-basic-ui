@@ -2,11 +2,13 @@ import React from "react";
 import propTypes from "prop-types";
 import './drawerContainer.css';
 
-function DrawerContainer(props){
+const DrawerContainer = React.forwardRef(
+    function drawerContainer(props, ref){
+        const {className, ...others} = props;
+        const componentClasses = props.className ? `drawer-container ${props.className}` : 'drawer-container'
 
-    const componentClasses = props.className ? `drawer-container ${props.className}` : 'drawer-container'
-
-    return <div className={componentClasses}>{props.children}</div>
-}
+        return <div ref={ref} className={componentClasses} {...others}>{props.children}</div>
+    }
+);
 
 export default DrawerContainer;

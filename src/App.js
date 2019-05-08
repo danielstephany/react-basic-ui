@@ -6,7 +6,7 @@ import MainContainer from 'components/mainContainer/mainContainer.js';
 import MainCol from 'components/mainCol/mainCol.js';
 import MainRow from 'components/mainRow/mainRow.js';
 import CardList from './containers/cardList/cardList.js';
-import DrawerContainer from 'components/drawerContainer/drawerContainer.js';
+import DrawerContainer from 'components/drawerContainer/DrawerContainer.js';
 import Drawer from 'components/drawer/drawer.js';
 
 class App extends Component {
@@ -32,7 +32,7 @@ class App extends Component {
   render() {
     return (
       <DrawerContainer>
-        <Drawer transitionTime={250} maxWidth={400} slideFrom="left" preventBodyScroll={true} ref={(drawer) => { this.drawer = drawer }}>
+        <Drawer transitionTime={250} maxWidth={400} slideFrom="left" preventBodyScroll={false} ref={(drawer) => { this.drawer = drawer }}>
           test
         </Drawer>
         <MainSection className="form-section" onClick={() => { this.drawer.toggleDrawer() }}>

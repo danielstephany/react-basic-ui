@@ -1,6 +1,6 @@
 import React from 'react';
 import Drawer from './drawer.js';
-import { shallow } from 'enzyme'
+import { shallow } from 'enzyme';
 
 describe("tests for Drawer", function () {
 

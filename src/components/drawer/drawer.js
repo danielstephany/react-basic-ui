@@ -49,11 +49,11 @@ class Drawer extends Component {
 
     preventBodyScroll = (preventBodyScroll) => {
         let scrollTop;
-        if ((preventBodyScroll === true) && this.state.open) {
+        if ((preventBodyScroll !== false) && this.state.open) {
             scrollTop = this.mainHtmlElement.scrollTop;
             this.mainHtmlElement.style.overflow = "hidden";
             this.mainHtmlElement.scrollTop = scrollTop;
-        } else if ((preventBodyScroll === true) && !this.state.open) {
+        } else if ((preventBodyScroll !== false) && !this.state.open) {
             this.mainHtmlElement.style.overflow = "auto";
         }
     }
@@ -67,7 +67,7 @@ class Drawer extends Component {
             transitionTime: transitionTime,
             maxWidth: maxWidth
         }
-        const drawerClasses = this.props.className ? `drawer ${this.props.className}` : 'drawer';
+        const drawerClasses = className ? `drawer ${className}` : 'drawer';
         let drawerStyles = this.setDrawerStyles(styleSetting);
         let overlayStyles = this.setOverlayStyles();
         this.preventBodyScroll(preventBodyScroll);
@@ -87,7 +87,8 @@ Drawer.propTypes = {
     isOpen: PropTypes.bool,
     slideFrom: PropTypes.string,
     transitionTime: PropTypes.number,
-    maxWidth: PropTypes.number
+    maxWidth: PropTypes.number,
+    preventBodyScroll: PropTypes.bool
 }
 
 export default Drawer;
