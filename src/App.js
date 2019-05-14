@@ -8,6 +8,7 @@ import MainRow from 'components/mainRow/mainRow.js';
 import CardList from './containers/cardList/cardList.js';
 import DrawerContainer from 'components/drawerContainer/DrawerContainer.js';
 import Drawer from 'components/drawer/drawer.js';
+import AppHeader from 'components/appHeader/appHeader.js';
 
 class App extends Component {
   constructor(props){
@@ -16,6 +17,9 @@ class App extends Component {
       cardList: [],
       pendingCard: undefined
     }
+  }
+  componentDidMount(){
+    console.dir(this.header);
   }
 
   updatePendingCard = (pendingCardData) => {
@@ -32,6 +36,7 @@ class App extends Component {
   render() {
     return (
       <DrawerContainer>
+        <AppHeader fixedTop={true} fixedSpacer={true} ref={(header)=>{this.header = header}} onClick={()=>{console.log("test");}}><h2>Logo</h2></AppHeader>
         <Drawer transitionTime={250} maxWidth={400} slideFrom="left" preventBodyScroll={false} ref={(drawer) => { this.drawer = drawer }}>
           test
         </Drawer>
