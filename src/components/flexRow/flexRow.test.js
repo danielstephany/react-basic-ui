@@ -1,25 +1,25 @@
 import React from 'react';
-import MainRow from './mainRow.js';
+import FlexRow from './flexRow.js';
 import { shallow } from 'enzyme'
 
-describe("tests for MainRow", function () {
+describe("tests for flexRow", function () {
 
     it("renders without crashing", function () {
-        shallow(<MainRow />);
+        shallow(<FlexRow />);
     });
 
     it("renders with added class", function () {
-        const wrap = shallow(<MainRow className="test" />);
+        const wrap = shallow(<FlexRow className="test" />);
         expect(wrap.hasClass('test')).toBe(true);
     });
 
     it("renders with default class and added classes ", function () {
-        const wrap = shallow(<MainRow className="test" />);
-        expect(wrap.hasClass('main-row test')).toBe(true);
+        const wrap = shallow(<FlexRow className="test" />);
+        expect(wrap.hasClass('flex-row test')).toBe(true);
     });
 
     it("renders with the child data", function () {
-        const wrap = shallow(<MainRow>test</MainRow>);
+        const wrap = shallow(<FlexRow>test</FlexRow>);
         expect(wrap.text()).toBe("test");
     });
 

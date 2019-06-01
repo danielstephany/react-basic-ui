@@ -1,0 +1,17 @@
+@import "../_themeStyles/colors.scss";
+
+.app-header {
+    background-color: $primary;
+    padding: 0 15px;
+    width: 100%;
+    &--fixed-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    &--fixed-bottom {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+}

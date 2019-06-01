@@ -4,13 +4,13 @@
         max-width: 1000px;
         margin: 0 auto;
     }
-    .main-row {
-        margin-top: 45px;
-        margin-bottom: 45px;
+    .flex-row {
+        margin-top: 46px;
+        margin-bottom: 46px;
     }
-    div[class^="main-col"] {
-        margin-top: 15px;
-        margin-bottom: 15px;
+    div[class^="flex-col"] {
+        margin-top: 16px;
+        margin-bottom: 16px;
     }
 }
 

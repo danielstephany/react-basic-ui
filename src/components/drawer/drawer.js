@@ -12,8 +12,10 @@ class Drawer extends Component {
         this.mainHtmlElement = document.getElementsByTagName("html")[0];
     }
 
-    toggleDrawer = () => {
-        this.setState({open: !this.state.open});
+    componentDidUpdate = () => {
+        if(this.state.open !== this.props.isOpen){
+            this.setState({open: this.props.isOpen})
+        }
     }
 
     setDrawerStyles = (styleSetting) => {
@@ -61,7 +63,7 @@ class Drawer extends Component {
     getRef = refName => ref => this[refName] = ref;
 
     render(){
-        let { className, slideFrom, transitionTime, maxWidth, preventBodyScroll, ...others} = this.props;
+        let { className, slideFrom, isOpen, transitionTime, maxWidth, preventBodyScroll, drawerToggle, forwardedRef, ...others} = this.props;
         const styleSetting = {
             slideFrom: slideFrom,
             transitionTime: transitionTime,
@@ -74,7 +76,7 @@ class Drawer extends Component {
 
         return (
             <React.Fragment>
-                <div className="overlay" style={overlayStyles} onClick={this.toggleDrawer} ref={this.getRef("overlay")}></div>
+                <div className="overlay" style={overlayStyles} onClick={drawerToggle} ref={forwardedRef}></div>
                 <div className={drawerClasses} style={drawerStyles} {...others}>
                     {this.props.children}
                 </div>
@@ -91,4 +93,4 @@ Drawer.propTypes = {
     preventBodyScroll: PropTypes.bool
 }
 
-export default Drawer;
+export default React.forwardRef(function drawer(props, ref) { return <Drawer {...props} forwardedRef={ref} /> });
