@@ -1,10 +1,12 @@
+@import "../_themeStyles/spacing.scss";
+
 .flex-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -$gutter-spacing;
+    margin-right: -$gutter-spacing;
     &--no-gutter {
         margin-left: 0;
         margin-right: 0;
@@ -20,6 +22,9 @@
     }
     &--align-items-baseline {
         align-items: baseline;
+    }
+     &--align-items-center {
+        align-items: center;
     }
     &--justify-content-flex-end {
         justify-content: flex-end;
@@ -42,8 +47,8 @@
     &--align-content-flex-end {
         align-content: flex-end;
     }
-    &--align-content-flex-start {
-        align-content: flex-start;
+    &--align-content-center {
+        align-content: center;
     }
     &--align-content-stretch {
         align-content: stretch;

@@ -1,6 +1,15 @@
+@import "../_themeStyles/spacing.scss";
+
 .main-container {
     display: block;
-    padding: 0 16px;
+    padding: 0 $gutter-spacing;
     margin-left: auto;
     margin-right: auto;
+    &--no-gutters {
+        padding: 0;
+        .flex-row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
 }

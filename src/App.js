@@ -9,6 +9,8 @@ import CardList from './containers/cardList/cardList.js';
 import DrawerContainer from 'components/drawerContainer/DrawerContainer.js';
 import Drawer from 'components/drawer/drawer.js';
 import AppHeader from 'components/appHeader/appHeader.js';
+import IconButton from 'components/iconButton/iconButton.js';
+import Menu from 'components/icons/menu.js';
 
 class App extends Component {
   constructor(props){
@@ -41,18 +43,18 @@ class App extends Component {
   render() {
     return (
       <DrawerContainer>
-        <AppHeader ref={(header) => { this.header = header }} onClick={()=>{console.log("test");}}>
-          <MainContainer>
-          <FlexRow justifyContent="space-around">
+        <AppHeader ref={(header) => { this.header = header } }>
+          <MainContainer gutters={false} >
+          <FlexRow>
+            <IconButton light disabled first onClick={() => { this.drawerToggle() }}><Menu /></IconButton>
             <FlexCol sm="2"><h2>Logo</h2></FlexCol>
-            <FlexCol >test</FlexCol>
           </FlexRow>
           </MainContainer>
         </AppHeader>
         <Drawer transitionTime={250} maxWidth={400} slideFrom="left" preventBodyScroll={false} drawerToggle={this.drawerToggle} isOpen={this.state.drawerOpen}>
           test
         </Drawer>
-        <MainSection className="form-section" onClick={() => { this.drawerToggle() }}>
+        <MainSection className="form-section">
           <MainContainer>
             <FlexRow>
               <FlexCol sm="12" md="6" offset-md="3">

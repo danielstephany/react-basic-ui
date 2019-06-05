@@ -18,6 +18,12 @@ describe("tests for MainContainer", function () {
         expect(wrap.hasClass('main-container test')).toBe(true);
     });
 
+
+    it("renders with the the no gutter class", function () {
+        const wrap = shallow(<MainContainer gutters={false}>test</MainContainer>);
+        expect(wrap.hasClass('main-container main-containers--no-gutters')).toBe(true);
+    });
+
     it("renders with the child data", function () {
         const wrap = shallow(<MainContainer>test</MainContainer>);
         expect(wrap.text()).toBe("test");
