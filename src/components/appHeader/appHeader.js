@@ -36,10 +36,10 @@ class AppHeader extends Component {
     }
 
     render () {
-        const { className, fixed, fixedSpacer, forwardedRef, children, align, ...others } = this.props,
-            spacer = fixedSpacer ? <div ref={(spacer) => { this.spacer = spacer }} className="app-header__spacer"></div> : null;
-        let ref,
-            classes = className ? "app-header " + className : "app-header";
+        const { className, fixed, fixedSpacer, forwardedRef, children, align, ...others } = this.props;
+        const spacer = fixedSpacer ? <div ref={(spacer) => { this.spacer = spacer }} className="app-header__spacer"></div> : null;
+        let ref;
+        let classes = className ? "app-header " + className : "app-header";
 
         classes = this.setFixedClass(classes);
 

@@ -44,10 +44,10 @@ class App extends Component {
     return (
       <DrawerContainer>
         <AppHeader ref={(header) => { this.header = header } }>
-          <MainContainer gutters={false} >
+          <MainContainer noGutters >
           <FlexRow>
             <IconButton light disabled first onClick={() => { this.drawerToggle() }}><Menu /></IconButton>
-            <FlexCol sm="2"><h2>Logo</h2></FlexCol>
+            <FlexCol xs="2"><h2>Logo</h2></FlexCol>
           </FlexRow>
           </MainContainer>
         </AppHeader>
@@ -57,7 +57,7 @@ class App extends Component {
         <MainSection className="form-section">
           <MainContainer>
             <FlexRow>
-              <FlexCol sm="12" md="6" offset-md="3">
+              <FlexCol sm="12" md="6" offsetMd="3">
                 <AddContactFrom addContact={this.addContact} updatePendingCard={this.updatePendingCard} />
               </FlexCol>
             </FlexRow>

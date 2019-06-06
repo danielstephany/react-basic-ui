@@ -1,7 +1,9 @@
 import React from 'react';
 import './form.scss';
 
-export default function Form(props) {
-    const extraClass = props.className ? props.className : '';
-    return <form className={extraClass} onSubmit={props.onSubmit} noValidate={props.noValidate}>{props.children}</form>
-}
+export default React.forwardRef(function form(props, ref) {
+    const {className, ...others} = props
+    const extraClass = className ? className : '';
+    
+    return <form className={extraClass} ref={ref} {...others} >{props.children}</form>
+});

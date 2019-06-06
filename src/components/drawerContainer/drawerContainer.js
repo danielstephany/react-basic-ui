@@ -1,5 +1,4 @@
 import React from "react";
-import propTypes from "prop-types";
 import './drawerContainer.css';
 
 const DrawerContainer = React.forwardRef(

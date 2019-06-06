@@ -1,13 +1,11 @@
 import React from 'react';
 import './mainContainer.scss';
 
-export default function MainContainer(props) {
-    const { className, gutters} = props;
+export default React.forwardRef(function MainContainer(props, ref) {
+    const { className, noGutters, children, ...others} = props;
     let mainContainerClass = className ? `main-container ${className}` : 'main-container';
     
-    if (gutters === false){
-        mainContainerClass += " main-containers--no-gutters";
-    }
+    if (noGutters) mainContainerClass += " main-containers--no-gutters";
 
-    return <div className={mainContainerClass}>{props.children}</div>
-}
+    return <div className={mainContainerClass} ref={ref} {...others}> {children} </div>
+});
