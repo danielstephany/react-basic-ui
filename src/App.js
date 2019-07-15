@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import AddContactFrom from './containers/addContactForm/addContactForm.js';
 import MainSection from 'components/mainSection/mainSection.js';
-import MainContainer from 'components/mainContainer/mainContainer.js';
+import Container from 'components/container/Container.js';
 import FlexCol from 'components/flexCol/flexCol.js';
 import FlexRow from 'components/flexRow/flexRow.js';
 import CardList from './containers/cardList/cardList.js';
@@ -44,18 +44,18 @@ class App extends Component {
     return (
       <DrawerContainer>
         <AppHeader ref={(header) => { this.header = header } }>
-          <MainContainer noGutters >
+          <Container noGutters >
           <FlexRow>
             <IconButton light disabled first onClick={() => { this.drawerToggle() }}><Menu /></IconButton>
             <FlexCol xs="2"><h2>Logo</h2></FlexCol>
           </FlexRow>
-          </MainContainer>
+          </Container>
         </AppHeader>
         <Drawer transitionTime={250} maxWidth={400} slideFrom="left" preventBodyScroll={false} drawerToggle={this.drawerToggle} isOpen={this.state.drawerOpen}>
           test
         </Drawer>
         <MainSection className="form-section">
-          <MainContainer>
+          <Container>
             <FlexRow>
               <FlexCol sm="12" md="6" offsetMd="3">
                 <AddContactFrom addContact={this.addContact} updatePendingCard={this.updatePendingCard} />
@@ -64,7 +64,7 @@ class App extends Component {
             <FlexRow>
               <CardList cards={this.state.cardList} pendingCard={this.state.pendingCard} />
             </FlexRow>
-          </MainContainer>
+          </Container>
         </MainSection>
       </DrawerContainer>
     );

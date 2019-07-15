@@ -1,5 +1,5 @@
 import React from 'react';
-import MainContainer from './mainContainer.js';
+import Container from './Container.js';
 import { shallow } from 'enzyme'
 
 describe("tests for MainContainer", function () {
