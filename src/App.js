@@ -3,7 +3,7 @@ import './App.scss';
 import AddContactFrom from './containers/addContactForm/addContactForm.js';
 import MainSection from 'components/mainSection/mainSection.js';
 import Container from 'components/container/Container.js';
-import FlexCol from 'components/flexCol/flexCol.js';
+import Col from 'components/col/Col.js';
 import FlexRow from 'components/flexRow/flexRow.js';
 import CardList from './containers/cardList/cardList.js';
 import DrawerContainer from 'components/drawerContainer/DrawerContainer.js';
@@ -20,9 +20,6 @@ class App extends Component {
       cardList: [],
       pendingCard: undefined
     }
-  }
-  componentDidMount(){
-    console.dir(this.header);
   }
 
   updatePendingCard = (pendingCardData) => {
@@ -47,7 +44,7 @@ class App extends Component {
           <Container noGutters >
           <FlexRow>
             <IconButton light disabled first onClick={() => { this.drawerToggle() }}><Menu /></IconButton>
-            <FlexCol xs="2"><h2>Logo</h2></FlexCol>
+            <Col xs="2"><h2>Logo</h2></Col>
           </FlexRow>
           </Container>
         </AppHeader>
@@ -57,9 +54,9 @@ class App extends Component {
         <MainSection className="form-section">
           <Container>
             <FlexRow>
-              <FlexCol sm="12" md="6" offsetMd="3">
+              <Col sm="12" md="6" offsetMd="3">
                 <AddContactFrom addContact={this.addContact} updatePendingCard={this.updatePendingCard} />
-              </FlexCol>
+              </Col>
             </FlexRow>
             <FlexRow>
               <CardList cards={this.state.cardList} pendingCard={this.state.pendingCard} />

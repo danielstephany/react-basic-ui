@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './blockTitle.scss';
+import './blockTitle.scss';
 
 export default function BlockTitle(props){
-    const blockTitleClasses = props.className ? `block-title ${props.className}` : 'block-title';
+    const classes = props.className ? `block-title ${props.className}` : 'block-title';
 
     return (
-        <div className={blockTitleClasses}>
+        <div className={classes}>
             { props.children }
         </div>
     );

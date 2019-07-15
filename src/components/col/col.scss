@@ -1,7 +1,7 @@
 @import "../_themeStyles/breakpoints.scss";
 @import "../_themeStyles/spacing.scss";
 
-.flex-col {
+.rbui-col {
     display: inline-block;
     padding: 0 $gutter-spacing;
     max-width: 100%;
@@ -10,16 +10,16 @@
     flex-basis: 0;
 }
 
-.flex-col-1, .flex-col-2, .flex-col-3, .flex-col-4, .flex-col-5, 
-.flex-col-6, .flex-col-7, .flex-col-8, .flex-col-9, .flex-col-10, .flex-col-11, .flex-col-12,
-.flex-col-sm, .flex-col-sm-1, .flex-col-sm-2, .flex-col-sm-3, .flex-col-sm-4, .flex-col-sm-5, 
-.flex-col-sm-6, .flex-col-sm-7, .flex-col-sm-8, .flex-col-sm-9, .flex-col-sm-10, .flex-col-sm-11, .flex-col-sm-12,
-.flex-col-md, .flex-col-md-1, .flex-col-md-2, .flex-col-md-3, .flex-col-md-4, .flex-col-md-5, 
-.flex-col-md-6, .flex-col-md-7, .flex-col-md-8, .flex-col-md-9, .flex-col-md-10, .flex-col-md-11, .flex-col-md-12,
-.flex-col-lg, .flex-col-lg-1, .flex-col-lg-2, .flex-col-lg-3, .flex-col-lg-4, .flex-col-lg-5, 
-.flex-col-lg-6, .flex-col-lg-7, .flex-col-lg-8, .flex-col-lg-9, .flex-col-lg-10, .flex-col-lg-11, .flex-col-lg-12,
-.flex-col-xl, .flex-col-xl-1, .flex-col-xl-2, .flex-col-xl-3, .flex-col-xl-4, .flex-col-xl-5, 
-.flex-col-xl-6, .flex-col-xl-7, .flex-col-xl-8, .flex-col-xl-9, .flex-col-xl-10, .flex-col-xl-11, .flex-col-xl-12
+.rbui-col-1, .rbui-col-2, .rbui-col-3, .rbui-col-4, .rbui-col-5, 
+.rbui-col-6, .rbui-col-7, .rbui-col-8, .rbui-col-9, .rbui-col-10, .rbui-col-11, .rbui-col-12,
+.rbui-col-sm, .rbui-col-sm-1, .rbui-col-sm-2, .rbui-col-sm-3, .rbui-col-sm-4, .rbui-col-sm-5, 
+.rbui-col-sm-6, .rbui-col-sm-7, .rbui-col-sm-8, .rbui-col-sm-9, .rbui-col-sm-10, .rbui-col-sm-11, .rbui-col-sm-12,
+.rbui-col-md, .rbui-col-md-1, .rbui-col-md-2, .rbui-col-md-3, .rbui-col-md-4, .rbui-col-md-5, 
+.rbui-col-md-6, .rbui-col-md-7, .rbui-col-md-8, .rbui-col-md-9, .rbui-col-md-10, .rbui-col-md-11, .rbui-col-md-12,
+.rbui-col-lg, .rbui-col-lg-1, .rbui-col-lg-2, .rbui-col-lg-3, .rbui-col-lg-4, .rbui-col-lg-5, 
+.rbui-col-lg-6, .rbui-col-lg-7, .rbui-col-lg-8, .rbui-col-lg-9, .rbui-col-lg-10, .rbui-col-lg-11, .rbui-col-lg-12,
+.rbui-col-xl, .rbui-col-xl-1, .rbui-col-xl-2, .rbui-col-xl-3, .rbui-col-xl-4, .rbui-col-xl-5, 
+.rbui-col-xl-6, .rbui-col-xl-7, .rbui-col-xl-8, .rbui-col-xl-9, .rbui-col-xl-10, .rbui-col-xl-11, .rbui-col-xl-12
 {
     display: inline-block;
     padding: 0 $gutter-spacing;
@@ -28,7 +28,7 @@
 }
 
 
-    .flex-col {
+    .rbui-col {
         &-1 {
             width: 8.333%
         }
@@ -66,7 +66,7 @@
             width: 100%;
         }
     }
-    .offset-col {
+    .rbui-offset-col {
         &-0 {
                 margin-left: 0%
             }
@@ -109,7 +109,7 @@
     }
 
 @media (min-width: $screen-sm) {
-    .flex-col-sm {
+    .rbui-col-sm {
         width: 100%;
         max-width: 100%;
         &-1 {
@@ -149,7 +149,7 @@
             width: 100%;
         }
     }
-    .offset-col-sm {
+    .rbui-offset-col-sm {
         &-0 {
                 margin-left: 0%
             }
@@ -194,7 +194,7 @@
 
 
 @media (min-width: $screen-md){
-    .flex-col-md {
+    .rbui-col-md {
         width: 100%;
         max-width: 100%
         &-1 {
@@ -234,7 +234,7 @@
             width: 100%;
         }
     }
-    .offset-col-md {
+    .rbui-offset-col-md {
         &-0 {
             margin-left: 0%
         }
@@ -278,7 +278,7 @@
 }
 
 @media (min-width: $screen-lg){
-    .flex-col-lg {
+    .rbui-col-lg {
         width: 100%;
         max-width: 100%
         &-1 {
@@ -318,7 +318,7 @@
             width: 100%;
         }
     }
-    .offset-col-lg {
+    .rbui-offset-col-lg {
         &-0 {
             margin-left: 0%
         }
@@ -362,7 +362,7 @@
 }
 
 @media (min-width: $screen-xl){
-    .flex-col-xl {
+    .rbui-col-xl {
         width: 100%;
         max-width: 100%
         &-1 {
@@ -402,7 +402,7 @@
             width: 100%;
         }
     }
-    .offset-col-xl {
+    .rbui-offset-col-xl {
         &-0 {
             margin-left: 0%
         }
