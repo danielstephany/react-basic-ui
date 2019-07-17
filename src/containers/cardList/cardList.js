@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Contact from 'components/contact/contact.js';
-import FlexCol from 'components/flexCol/flexCol.js';
+import Col from 'components/col/Col.js';
 
 class CardList extends Component {
     constructor(props){
@@ -9,16 +9,16 @@ class CardList extends Component {
     }
 
     render() {
-        let cards = <FlexCol lg="3" md="4" sm="10" offsetSm="1" offsetMd="0">there are currently no contacts</FlexCol>,
+        let cards = <Col lg="3" md="4" sm="10" offsetSm="1" offsetMd="0">there are currently no contacts</Col>,
             pendingCard = null;
 
         if (this.props.cards) {
             cards = this.props.cards.map((card) => {
                 this.key ++;
                 return (
-                    <FlexCol key={this.key} lg="3" md="4" sm="10" offsetSm="1" offsetMd="0">
+                    <Col key={this.key} lg="3" md="4" sm="10" offsetSm="1" offsetMd="0">
                         <Contact fullName={card.fullName} email={card.email} phone={card.phone} />
-                    </FlexCol>
+                    </Col>
                 );
 
             });
@@ -26,9 +26,9 @@ class CardList extends Component {
 
         if(this.props.pendingCard){
             pendingCard = (
-            <FlexCol lg="3" md="4" sm="10" offsetSm="1" offsetMd="0">
+            <Col lg="3" md="4" sm="10" offsetSm="1" offsetMd="0">
                     <Contact className="contact--pending" fullName={this.props.pendingCard.fullName} email={this.props.pendingCard.email} phone={this.props.pendingCard.phone} />
-            </FlexCol>
+            </Col>
             );
         }
 

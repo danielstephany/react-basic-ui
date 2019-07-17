@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.scss';
 import AddContactFrom from './containers/addContactForm/addContactForm.js';
 import MainSection from 'components/mainSection/mainSection.js';
-import MainContainer from 'components/mainContainer/mainContainer.js';
-import FlexCol from 'components/flexCol/flexCol.js';
-import FlexRow from 'components/flexRow/flexRow.js';
+import Container from 'components/container/Container.js';
+import Col from 'components/col/Col.js';
+import Row from 'components/row/Row.js';
 import CardList from './containers/cardList/cardList.js';
 import DrawerContainer from 'components/drawerContainer/DrawerContainer.js';
 import Drawer from 'components/drawer/drawer.js';
@@ -23,9 +23,6 @@ class App extends Component {
       cardList: [],
       pendingCard: undefined
     }
-  }
-  componentDidMount(){
-    console.dir(this.header);
   }
 
   updatePendingCard = (pendingCardData) => {
@@ -47,12 +44,12 @@ class App extends Component {
     return (
       <DrawerContainer>
         <AppHeader ref={(header) => { this.header = header } }>
-          <MainContainer noGutters >
-          <FlexRow>
+          <Container noGutters >
+          <Row>
             <IconButton light disabled first onClick={() => { this.drawerToggle() }}><Menu /></IconButton>
-            <FlexCol xs="2"><h2>Logo</h2></FlexCol>
-          </FlexRow>
-          </MainContainer>
+            <Col xs="2"><h2>Logo</h2></Col>
+          </Row>
+          </Container>
         </AppHeader>
         <Drawer transitionTime={250} maxWidth={400} slideFrom="left" preventBodyScroll={false} drawerToggle={this.drawerToggle} isOpen={this.state.drawerOpen}>
           <List>
@@ -72,16 +69,16 @@ class App extends Component {
           </List>
         </Drawer>
         <MainSection className="form-section">
-          <MainContainer>
-            <FlexRow>
-              <FlexCol sm="12" md="6" offsetMd="3">
+          <Container>
+            <Row>
+              <Col sm="12" md="6" offsetMd="3">
                 <AddContactFrom addContact={this.addContact} updatePendingCard={this.updatePendingCard} />
-              </FlexCol>
-            </FlexRow>
-            <FlexRow>
+              </Col>
+            </Row>
+            <Row>
               <CardList cards={this.state.cardList} pendingCard={this.state.pendingCard} />
-            </FlexRow>
-          </MainContainer>
+            </Row>
+          </Container>
         </MainSection>
       </DrawerContainer>
     );

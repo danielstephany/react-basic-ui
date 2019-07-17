@@ -1,6 +1,6 @@
 @import "../_themeStyles/spacing.scss";
 
-.flex-row {
+.rbui-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -11,7 +11,7 @@
         margin-left: 0;
         margin-right: 0;
     }
-    &--align-items-streach {
+    &--align-items-stretch {
         align-items: stretch;
     }
     &--align-items-flex-start {
