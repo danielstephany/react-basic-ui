@@ -1,0 +1,7 @@
+.list-item {
+    padding: 8px;
+    position: relative;
+    &--with-secondary {
+        padding-right: 50px;
+    }
+}

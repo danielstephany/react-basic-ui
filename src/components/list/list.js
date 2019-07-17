@@ -5,7 +5,7 @@ const List = React.forwardRef(function list(props, ref){
     const { className, children, ...others} = props;
     const classes = className ? 'list ' + className : 'list';
 
-    return <section role="list" className={classes} {...others} ref={ref}>{children}</section>;
+    return <div role="list" className={classes} {...others} ref={ref}>{children}</div>;
 });
 
 export default List;

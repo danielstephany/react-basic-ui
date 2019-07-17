@@ -1,0 +1,6 @@
+.list {
+    display: block;
+    & > .list {
+        padding-left: 12px;
+    }
+}
