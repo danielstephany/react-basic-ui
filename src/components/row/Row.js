@@ -1,8 +1,9 @@
 import React from 'react';
 import './row.scss';
 import applyClassName from '../_utils/applyClassName/applyClassName.js';
+import PropTypes from 'prop-types';
 
-export default React.forwardRef( function flexRow(props, ref) {
+const Row = React.forwardRef( function row(props, ref) {
     const { className, children, alignItems, justifyContent, alignContent, spacing, gutters, ...others} = props
     const alignItemsOpts = ['stretch', 'flex-start', 'flex-end', 'baseline', 'center'];
     const justifyContentOpts = ['flex-end', 'center', 'space-between', 'space-around', 'space-evenly'];
@@ -19,3 +20,15 @@ export default React.forwardRef( function flexRow(props, ref) {
 
     return <div className={classes} ref={ref} {...others}>{children}</div>
 });
+
+Row.propTypes = {
+    className: PropTypes.string,
+    children: PropTypes.any,
+    alignItems: PropTypes.string,
+    justifyContent: PropTypes.string,
+    alignContent: PropTypes.string,
+    spacing: PropTypes.string,
+    gutters: PropTypes.string,
+}
+
+export default Row;

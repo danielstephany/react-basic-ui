@@ -1,5 +1,6 @@
 import React from 'react';
 import './container.scss';
+import PropTypes from 'prop-types';
 
 const Container = React.forwardRef(function container(props, ref) {
     const { className, noGutters, children, ...others} = props;
@@ -11,5 +12,11 @@ const Container = React.forwardRef(function container(props, ref) {
 
     return <div className={classes} ref={ref} {...others}> {children} </div>
 });
+
+Container.propTypes = {
+    className: PropTypes.string,
+    noGutters: PropTypes.bool,
+    children: PropTypes.any
+}
 
 export default Container;
