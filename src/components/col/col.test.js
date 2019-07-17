@@ -34,22 +34,22 @@ describe("tests for FormItem", function () {
     });
 
     it("renders with sm offset class", function () {
-        const wrap = shallow(<Col offset-sm="2" />);
+        const wrap = shallow(<Col offsetSm="2" />);
         expect(wrap.hasClass('rbui-offset-col-sm-2')).toBe(true);
     });
 
     it("renders with md offset class", function () {
-        const wrap = shallow(<Col offset-md="2" />);
+        const wrap = shallow(<Col offsetMd="2" />);
         expect(wrap.hasClass('rbui-offset-col-md-2')).toBe(true);
     });
 
     it("renders with xl offset class", function () {
-        const wrap = shallow(<Col offset-lg="2" />);
+        const wrap = shallow(<Col offsetLg="2" />);
         expect(wrap.hasClass('rbui-offset-col-lg-2')).toBe(true);
     });
 
     it("renders with xl offset class", function () {
-        const wrap = shallow(<Col offset-xl="2" />);
+        const wrap = shallow(<Col offsetXl="2" />);
         expect(wrap.hasClass('rbui-offset-col-xl-2')).toBe(true);
     });
 

@@ -5,6 +5,7 @@ import MainSection from 'components/mainSection/mainSection.js';
 import Container from 'components/container/Container.js';
 import Col from 'components/col/Col.js';
 import Row from 'components/row/Row.js';
+import Grid from 'components/grid/Grid.js';
 import CardList from './containers/cardList/cardList.js';
 import DrawerContainer from 'components/drawerContainer/DrawerContainer.js';
 import Drawer from 'components/drawer/drawer.js';
@@ -44,12 +45,12 @@ class App extends Component {
     return (
       <DrawerContainer>
         <AppHeader ref={(header) => { this.header = header } }>
-          <Container noGutters >
-          <Row>
-            <IconButton light disabled first onClick={() => { this.drawerToggle() }}><Menu /></IconButton>
-            <Col xs="2"><h2>Logo</h2></Col>
-          </Row>
-          </Container>
+          <Grid container noGutters >
+            <Grid row>
+              <IconButton light disabled first onClick={() => { this.drawerToggle() }}><Menu /></IconButton>
+              <Grid col xs="2"><h2>Logo</h2></Grid>
+            </Grid>
+          </Grid>
         </AppHeader>
         <Drawer transitionTime={250} maxWidth={400} slideFrom="left" preventBodyScroll={false} drawerToggle={this.drawerToggle} isOpen={this.state.drawerOpen}>
           <List>
@@ -69,16 +70,16 @@ class App extends Component {
           </List>
         </Drawer>
         <MainSection className="form-section">
-          <Container>
-            <Row>
-              <Col sm="12" md="6" offsetMd="3">
+          <Grid container>
+            <Grid row>
+              <Grid col sm="12" md="6" offsetMd="3">
                 <AddContactFrom addContact={this.addContact} updatePendingCard={this.updatePendingCard} />
-              </Col>
-            </Row>
-            <Row>
+              </Grid>
+            </Grid>
+            <Grid row>
               <CardList cards={this.state.cardList} pendingCard={this.state.pendingCard} />
-            </Row>
-          </Container>
+            </Grid>
+          </Grid>
         </MainSection>
       </DrawerContainer>
     );

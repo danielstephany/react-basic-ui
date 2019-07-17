@@ -18,11 +18,9 @@ const Col = React.forwardRef(function col(props, ref) {
         offsetLg, 
         offsetXl, 
         ...others
-    } = props,
-        sizes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+    } = props;
+    const sizes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
     let classes = "";
-
-console.log(xl);
 
     classes = applyClassName(classes, 'rbui-col-', xs, sizes);
     classes = applyClassName(classes, 'rbui-col-sm-', sm, sizes);
@@ -37,7 +35,7 @@ console.log(xl);
 
     classes = classes || "rbui-col";
 
-    classes = className ? `${className} ${classes}` : classes;
+    classes = className ? `${classes} ${className}` : classes;
 
     return <div className={classes} ref={ref} {...others} >{children}</div>
 });
