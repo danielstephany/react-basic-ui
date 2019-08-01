@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Contact from 'components/contact/contact.js';
-import Col from 'components/col/Col.js';
 import Grid from 'components/grid/Grid.js';
 
 class CardList extends Component {

@@ -1,0 +1,10 @@
+@import '../_themeStyles/colors.scss';
+@import '../_themeStyles/properties.scss';
+@import '../_themeStyles/spacing.scss';
+
+.bui-paper {
+    display: block;
+    background-color: $primary-bg;
+    box-shadow: $shadow;
+    padding: $container-padding
+}

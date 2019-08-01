@@ -1,0 +1,13 @@
+@import '../_themeStyles/spacing.scss';
+
+.list-item-icon {
+    display: inline-flex;
+    height: 100%;
+    width: auto;
+    margin-right: $horizontal-spacing;
+    img,
+    svg {
+        height: 100%;
+        width: auto;
+    }
+}

@@ -106,7 +106,7 @@ module.exports = function(webpackEnv) {
       loaders.push({
         loader: require.resolve(preProcessor),
         options: {
-          sourceMap: isEnvProduction && shouldUseSourceMap,
+          sourceMap: true,
         },
       });
     }
@@ -394,7 +394,7 @@ module.exports = function(webpackEnv) {
               exclude: cssModuleRegex,
               use: getStyleLoaders({
                 importLoaders: 1,
-                sourceMap: isEnvProduction && shouldUseSourceMap,
+                sourceMap: true,
               }),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
@@ -408,7 +408,7 @@ module.exports = function(webpackEnv) {
               test: cssModuleRegex,
               use: getStyleLoaders({
                 importLoaders: 1,
-                sourceMap: isEnvProduction && shouldUseSourceMap,
+                sourceMap: true,
                 modules: true,
                 getLocalIdent: getCSSModuleLocalIdent,
               }),
@@ -422,7 +422,7 @@ module.exports = function(webpackEnv) {
               use: getStyleLoaders(
                 {
                   importLoaders: 2,
-                  sourceMap: isEnvProduction && shouldUseSourceMap,
+                  sourceMap: true,
                 },
                 'sass-loader'
               ),
@@ -439,7 +439,7 @@ module.exports = function(webpackEnv) {
               use: getStyleLoaders(
                 {
                   importLoaders: 2,
-                  sourceMap: isEnvProduction && shouldUseSourceMap,
+                  sourceMap: true,
                   modules: true,
                   getLocalIdent: getCSSModuleLocalIdent,
                 },
