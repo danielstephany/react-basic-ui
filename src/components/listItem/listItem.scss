@@ -3,6 +3,7 @@
 
 .list-item {
     background-color: $primary-bg;
+    box-sizing: border-box;
     display: block;
     align-items: center;
     position: relative;

@@ -2,6 +2,7 @@
 @import "../_themeStyles/spacing.scss";
 
 .rbui-col {
+    box-sizing: border-box;
     display: inline-block;
     padding: 0 $gutter-spacing;
     max-width: 100%;
@@ -21,6 +22,7 @@
 .rbui-col-xl, .rbui-col-xl-1, .rbui-col-xl-2, .rbui-col-xl-3, .rbui-col-xl-4, .rbui-col-xl-5, 
 .rbui-col-xl-6, .rbui-col-xl-7, .rbui-col-xl-8, .rbui-col-xl-9, .rbui-col-xl-10, .rbui-col-xl-11, .rbui-col-xl-12
 {
+    box-sizing: border-box;
     display: inline-block;
     padding: 0 $gutter-spacing;
     width: 100%;

@@ -1,6 +1,7 @@
 @import "../_themeStyles/colors.scss";
 
 .contact {
+    box-sizing: border-box;
     word-wrap: break-word;
     font-size: 14px;
     &--pending {
@@ -9,11 +10,5 @@
             background-color: $primary-bg;
             color: #555;
         }
-    }
-}
-
-@media (min-width: 00px){
-    .contact {
-        font-size: 16px;
     }
 }

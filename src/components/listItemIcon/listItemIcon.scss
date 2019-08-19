@@ -1,6 +1,7 @@
 @import '../_themeStyles/spacing.scss';
 
 .list-item-icon {
+    box-sizing: border-box;
     display: inline-flex;
     height: 100%;
     width: auto;

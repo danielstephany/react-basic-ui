@@ -1,6 +1,7 @@
 @import "../_themeStyles/colors.scss";
 
 .drawer {
+    box-sizing: border-box;
     box-shadow: 0 0 3px 1px #ddd;
     background-color: $primary-bg;
     display: inline-block;

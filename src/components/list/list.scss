@@ -1,4 +1,5 @@
 .list {
+    box-sizing: border-box;
     display: block;
     & > .list {
         padding-left: 12px;

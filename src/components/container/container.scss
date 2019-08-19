@@ -2,6 +2,7 @@
 @import "../_themeStyles/breakpoints.scss";
 
 .rbui-container {
+    box-sizing: border-box;
     display: block;
     padding: 0 $gutter-spacing;
     margin-left: auto;

@@ -2,11 +2,13 @@
 
 .form-item {
     label {
+        box-sizing: border-box;
         display: block;
         font-weight: 500;
         font-size: inherit;
     }
     input {
+        box-sizing: border-box;
         display: block;
         width: 100%;
         border-radius: 4px;
@@ -19,6 +21,7 @@
         border-color: $red;
     }
     .inline-error {
+        box-sizing: border-box;
         color: $red;
         font-size: 14px;
     }
