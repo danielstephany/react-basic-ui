@@ -5,7 +5,7 @@ import applyClassName from '../_utils/applyClassName/applyClassName.js';
 
 
 const Container = React.forwardRef(function container(props, ref) {
-    const { className, noGutters, unFramed, children, vMargin, ...others} = props;
+    const { className, noGutters, stretch, children, vMargin, ...others} = props;
     const vMarginOpts = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
     let classes = className ? `rbui-container ${className}` : 'rbui-container';
    
@@ -15,8 +15,8 @@ const Container = React.forwardRef(function container(props, ref) {
         classes += " rbui-container--no-gutters";
     }
 
-    if (unFramed) {
-        classes += " rbui-container--unFramed";
+    if (stretch) {
+        classes += " rbui-container--stretch";
     }
 
     return <div className={classes} ref={ref} {...others}> {children} </div>
