@@ -9,9 +9,7 @@
 /coverage
 
 # build folders
-/build
-/docs/build
-/examples/build
+*/build
 
 # misc
 .DS_Store

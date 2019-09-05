@@ -6,8 +6,8 @@
   "scripts": {
     "build-docs": "webpack --config webpack/webpack.prod.js",
     "build-docs-dev": "webpack --config webpack/webpack.dev.js",
-    "start-docs": "webpack-dev-server --open --watch --config webpack/webpack.dev.js --content-base src/docs/dist",
-    "start-examples": "webpack-dev-server --open --watch --config webpack/sandbox/webpack.config.js --content-base src/examples/dist"
+    "start-docs": "webpack-dev-server --open --watch --config webpack/webpack.dev.js --content-base src/docs/build",
+    "start-examples": "webpack-dev-server --open --watch --config webpack/sandbox/webpack.config.js --content-base src/examples/build"
   },
   "author": "",
   "license": "ISC",

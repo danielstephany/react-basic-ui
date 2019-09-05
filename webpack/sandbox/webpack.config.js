@@ -12,7 +12,7 @@ module.exports = {
     },
     output: {
         filename: "js/[name].bundle.js",
-        path: path.resolve(__dirname, '../../examples/dist')
+        path: path.resolve(__dirname, '../../examples/build')
     },
     resolve: {
         alias: {

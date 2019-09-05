@@ -6,7 +6,7 @@ module.exports = {
     },
     output: {
         filename: "js/[name].bundle.js",
-        path: path.resolve(__dirname, '../docs/dist')
+        path: path.resolve(__dirname, '../docs/build')
     },
     resolve: {
         alias: {
