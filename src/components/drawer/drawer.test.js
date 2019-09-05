@@ -10,7 +10,7 @@ describe("tests for Drawer", function () {
 
     it("renders with added class", function () {
         const wrap = shallow(<Drawer className="test" />);
-        expect(wrap.find('.drawer').hasClass('test')).toBe(true);
+        expect(wrap.find('.drawer').hasClass('test')).toBe(true) ;
     });
 
     it("renders with added classes and default class", function () {

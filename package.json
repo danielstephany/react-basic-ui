@@ -8,7 +8,8 @@
     "build-docs-dev": "webpack --config webpack/webpack.dev.js",
     "start-docs": "webpack-dev-server --open --watch --config webpack/webpack.dev.js --content-base src/docs/build",
     "start-examples": "webpack-dev-server --open --watch --config webpack/sandbox/webpack.config.js --content-base src/examples/build",
-    "test": "jest --notify --config jest/config.js"
+    "test": "jest --notify --config jest/config.js",
+    "start-test": "jest --notify --config jest/config.js --watch"
   },
   "author": "",
   "license": "ISC",
