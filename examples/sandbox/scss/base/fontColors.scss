@@ -1,0 +1,35 @@
+.color {
+    &--primary {
+        background-color: $primary;
+    }
+    &--secondary {
+        background-color: $secondary;
+    }
+    &--tertiary {
+        background-color: $tertiary;
+    }
+    &--blue {
+        background-color: $blue;
+    }
+    &--red {
+        background-color: $red;
+    }
+    &--yellow {
+        background-color: $yellow;
+    }
+    &--green {
+        background-color: $green;
+    }
+    &--orange {
+        background-color: $orange;
+    }
+    &--purple {
+        background-color: $purple;
+    }
+    &--white {
+        background-color: $white;
+    }
+    &--black {
+        background-color: $black;
+    }
+}
