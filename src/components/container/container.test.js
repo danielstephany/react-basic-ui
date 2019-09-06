@@ -20,13 +20,13 @@ describe("tests for Container", function () {
 
 
     it("renders with the the no gutter class", function () {
-        const wrap = shallow(<Container gutters={false}>test</Container>);
+        const wrap = shallow(<Container noGutters >test</Container>);
         expect(wrap.hasClass('rbui-container rbui-container--no-gutters')).toBe(true);
     });
 
     it("renders with the child data", function () {
         const wrap = shallow(<Container>test</Container>);
-        expect(wrap.text()).toBe("test");
+        expect(wrap.text().trim()).toBe("test");
     });
 
 });

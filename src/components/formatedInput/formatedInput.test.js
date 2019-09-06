@@ -27,7 +27,7 @@ describe("tests for FormatedInput", function () {
             type={"testType"}
             value={"testValue"}
             onChange={changeHandler} />);
-        expect(wrap.find('input').html()).toBe("<input type=\"testType\" id=\"testID\" name=\"testName\" value=\"testValue\"/>");
+        expect(wrap.find('input').html()).toBe("<input type=\"testType\" class=\"form-item test\" id=\"testID\" name=\"testName\" value=\"testValue\"/>");
     });
 
 });
