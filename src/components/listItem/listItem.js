@@ -1,5 +1,5 @@
 import React from 'react';
-import './listItem.scss';
+import './listItem.less';
 import hasChild from '../_utils/hasChild/hasChild.js';
 
 const ListItem = React.forwardRef(function(props, ref){

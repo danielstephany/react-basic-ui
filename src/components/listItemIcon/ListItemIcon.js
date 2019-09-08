@@ -1,5 +1,5 @@
 import React from 'react';
-import './listItemIcon.scss';
+import './listItemIcon.less';
 
 const ListItemIcon = React.forwardRef( function listItemIcon(props, ref) {
     const {className, children, ...others} = props;

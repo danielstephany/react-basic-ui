@@ -1,5 +1,5 @@
 import React from 'react';
-import './iconButton.scss';
+import './iconButton.less';
 
 export default React.forwardRef(function iconButton(props, ref) {
     const { className, light, first, last, disabled, ...others} = props;

@@ -1,7 +1,7 @@
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const getStyleLoaders = function(cssOptions, devMode = false, preProcessor) {
+const getStyleLoaders = function (cssOptions, devMode = false, preProcessor, preProcessorOpts = {}) {
     let cssRules = [
         { loader: devMode ? "style-loader" :  MiniCssExtractPlugin.loader },
         {
@@ -32,7 +32,10 @@ const getStyleLoaders = function(cssOptions, devMode = false, preProcessor) {
     if(typeof preProcessor !== "undefined"){
         cssRules.push( {
             loader: require.resolve(preProcessor),
-            options: { sourceMap: true }
+            options: { 
+                sourceMap: true,
+                ...preProcessorOpts 
+            }
         });
     }
     return cssRules;

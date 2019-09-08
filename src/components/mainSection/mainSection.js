@@ -1,5 +1,5 @@
 import React from 'react';
-import './mainSection.scss';
+import './mainSection.less';
 
 const MainSection = React.forwardRef(
     function mainSection(props, ref){

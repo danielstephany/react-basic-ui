@@ -41,11 +41,16 @@ module.exports = {
                 }, true)
             },
             {
-                test: /\.scss$/,
+                test: /\.less$/,
                 use: getStyleLoaders({
                     importLoaders: 2,
                     sourceMap: true
-                }, true, 'sass-loader')
+                }, true, 'less-loader', {
+                   modifyVars: {
+                        'primary': '#1DA57A',
+                   },
+                    javascriptEnabled: true,
+                })
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,

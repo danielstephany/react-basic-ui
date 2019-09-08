@@ -1,5 +1,5 @@
 import React from 'react';
-import './container.scss';
+import './container.less';
 import PropTypes from 'prop-types';
 import applyClassName from '../_utils/applyClassName/applyClassName.js';
 

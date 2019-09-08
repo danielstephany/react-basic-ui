@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../card/card.js';
 import BlockContent from '../blockContent/blockContent.js';
 import BlockTitle from '../blockTitle/blockTitle.js';
-import './contact.scss';
+import './contact.less';
 import PropTypes from 'prop-types';
 
 export default function contact(props) {

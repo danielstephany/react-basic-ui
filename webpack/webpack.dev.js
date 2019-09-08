@@ -35,11 +35,11 @@ module.exports = merge(common, {
                 }, true)
             },
             {
-                test: /\.scss$/,
+                test: /\.less$/,
                 use: getStyleLoaders({
                     importLoaders: 2,
                     sourceMap: true
-                }, true, 'sass-loader')
+                }, true, 'less-loader')
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import './formItem.scss';
+import './formItem.less';
 
 const FormItem = React.forwardRef(function(props, ref) {
     const {className, children, ...others} = props;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.scss';
+import './App.less';
 import AddContactFrom from './containers/addContactForm/addContactForm.js';
 import MainSection from 'components/mainSection/mainSection.js';
 // import Container from 'components/container/Container.js';

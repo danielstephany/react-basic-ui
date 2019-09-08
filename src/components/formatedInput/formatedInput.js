@@ -1,5 +1,5 @@
 import React from 'react';
-import './formatedInput.scss';
+import './formatedInput.less';
 
 const FormatedInput = React.forwardRef((props, ref) => {
     const { className, errMessage, ...others} = props;

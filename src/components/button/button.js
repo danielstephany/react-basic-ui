@@ -1,5 +1,5 @@
 import React from 'react';
-import './button.scss'
+import './button.less'
 
 export default function Button(props){
     const buttonClass = props.className ? `main-btn ${props.className}` : 'main-btn';

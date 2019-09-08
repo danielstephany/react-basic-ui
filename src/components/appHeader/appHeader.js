@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './appHeader.scss';
+import './appHeader.less';
 import PropTypes from 'prop-types';
 
 class AppHeader extends Component {

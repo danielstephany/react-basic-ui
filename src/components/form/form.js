@@ -1,5 +1,5 @@
 import React from 'react';
-import './form.scss';
+import './form.less';
 
 export default React.forwardRef(function form(props, ref) {
     const {className, ...others} = props

@@ -1,5 +1,5 @@
 import React from 'react';
-import './listItemSecondary.scss';
+import './listItemSecondary.less';
 
 const ListItemSecondary = React.forwardRef( function(props, ref){
     const{children, className, ...others} = props;

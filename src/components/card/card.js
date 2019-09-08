@@ -1,5 +1,5 @@
 import React from 'react';
-import './card.scss';
+import './card.less';
 
 export default function Card(props) {
     const extraClass = props.className ? props.className : '';
