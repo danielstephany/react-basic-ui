@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './appHeader.less';
 import PropTypes from 'prop-types';
+import applyClassName from '../_utils/applyClassName/applyClassName.js';
 
 class AppHeader extends Component {
 
     syncHeight = () => {
         this.spacer.style.height = this.header.clientHeight + "px";
+        console.log(this.header);
     }
 
     componentDidMount() {
@@ -21,37 +23,23 @@ class AppHeader extends Component {
         }
     }
 
-    setFixedClass = (currentClasses) => {
-        let fixed = this.props.fixed;
-        if (typeof fixed === "string"){
-                fixed = fixed.toLowerCase();
-
-            if (fixed === "top") {
-                return currentClasses + " app-header--fixed-top";
-            } else if (fixed === "bottom") {
-                return currentClasses + " app-header--fixed-bottom";
-            }
-        }
-        return currentClasses;
-    }
-
     render () {
         const { className, fixed, fixedSpacer, forwardedRef, children, align, ...others } = this.props;
         const spacer = fixedSpacer ? <div ref={(spacer) => { this.spacer = spacer }} className="app-header__spacer"></div> : null;
+        const fixedOptions = ['top', 'bottom']
         let ref;
         let classes = className ? "app-header " + className : "app-header";
-
-        classes = this.setFixedClass(classes);
+        classes = applyClassName(classes, 'app-header--fixed-', fixed, fixedOptions);
 
         if (forwardedRef){
-            ref = {ref: (header) => { this.header = header; forwardedRef(header)} };
-        }else {
-            ref = { ref: (header) => { this.header = header;} };
+            ref = header => { this.header = header; forwardedRef(header); };
+        } else {
+            ref = header => { this.header = header;};
         }
 
         return (
             <React.Fragment>
-                <header className={classes} {...ref} {...others} >   
+                <header className={classes} ref={ref} {...others} >   
                     {children}
                 </header>
                 {spacer}

@@ -46,7 +46,7 @@ class App extends Component {
   render() {
     return (
       <DrawerContainer>
-        <AppHeader ref={(header) => { this.header = header } }>
+        <AppHeader ref={(header) => { this.header = header } } onClick={()=> {console.log(this.header)}}>
           <Grid container noGutters >
             <Grid row>
               <IconButton light disabled first onClick={() => { this.drawerToggle() }}><Menu /></IconButton>
