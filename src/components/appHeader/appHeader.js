@@ -7,29 +7,39 @@ class AppHeader extends Component {
 
     syncHeight = () => {
         this.spacer.style.height = this.header.clientHeight + "px";
-        console.log(this.header);
     }
 
     componentDidMount() {
         if (this.props.fixedSpacer){
-            this.syncHeight();
+            this.syncHeightTimer = setInterval(()=>{
+                this.syncHeight();
+            }, 250);
+            this.syncHeightTimeout = setTimeout(() => {
+                clearInterval(this.syncHeightTimer);
+            }, 5000);
             window.addEventListener('resize', this.syncHeight);
         }
     }
 
     componentWillUnmount() {
         if (this.props.fixedSpacer) {
+            if (this.syncHeightTimer) {
+                clearInterval(this.syncHeightTimer);
+            }
+            if (this.syncHeightTimeout) {
+                clearTimeout(this.syncHeightTimeout)
+            }
             window.removeEventListener('resize', this.syncHeight);
         }
     }
 
     render () {
         const { className, fixed, fixedSpacer, forwardedRef, children, align, ...others } = this.props;
-        const spacer = fixedSpacer ? <div ref={(spacer) => { this.spacer = spacer }} className="app-header__spacer"></div> : null;
+        const spacer = fixedSpacer ? <div ref={(spacer) => { this.spacer = spacer }} className="rbui-app-header__spacer"></div> : null;
         const fixedOptions = ['top', 'bottom']
         let ref;
-        let classes = className ? "app-header " + className : "app-header";
-        classes = applyClassName(classes, 'app-header--fixed-', fixed, fixedOptions);
+        let classes = className ? "rbui-app-header " + className : "rbui-app-header";
+        classes = applyClassName(classes, 'rbui-app-header--fixed-', fixed, fixedOptions);
 
         if (forwardedRef){
             ref = header => { this.header = header; forwardedRef(header); };

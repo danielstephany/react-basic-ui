@@ -9,7 +9,7 @@ import Grid from 'components/grid/Grid.js';
 import CardList from './containers/cardList/cardList.js';
 import DrawerContainer from 'components/drawerContainer/DrawerContainer.js';
 import Drawer from 'components/drawer/drawer.js';
-import AppHeader from 'components/appHeader/appHeader.js';
+import AppHeader from 'components/appHeader/AppHeader.js';
 import IconButton from 'components/iconButton/iconButton.js';
 import Menu from 'components/icons/menu.js';
 import List from 'components/list/list.js';
@@ -46,7 +46,7 @@ class App extends Component {
   render() {
     return (
       <DrawerContainer>
-        <AppHeader ref={(header) => { this.header = header } }>
+        <AppHeader fixed="top" fixedSpacer ref={(header) => { this.header = header } }>
           <Grid container noGutters >
             <Grid row>
               <IconButton light disabled first onClick={() => { this.drawerToggle() }}><Menu /></IconButton>
