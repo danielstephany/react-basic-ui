@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Card from 'components/card/card.js';
 import BlockTitle from 'components/blockTitle/blockTitle.js';
-import BlockContent from 'components/blockContent/blockContent.js';
+import BlockContent from 'components/blockContent/BlockContent.js';
 import FormItem from 'components/formItem/formItem.js';
 import FormatedInput from 'components/formatedInput/formatedInput.js';
 import Form from 'components/form/form.js';

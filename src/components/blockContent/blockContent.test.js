@@ -15,7 +15,7 @@ describe("tests for BlockContent",function(){
 
     it("renders with added classes and default class", function () {
         const wrap = shallow(<BlockContent className="test" />);
-        expect(wrap.hasClass('block-content test')).toBe(true);
+        expect(wrap.hasClass('rbui-block-content test')).toBe(true);
     });
 
     it("renders with the child data", function () {
