@@ -15,7 +15,7 @@ describe("tests for blockTitle", function () {
 
     it("renders with added classes and default class", function () {
         const wrap = shallow(<BlockTitle className="test" />);
-        expect(wrap.hasClass('block-title test')).toBe(true);
+        expect(wrap.hasClass('rbui-block-title test')).toBe(true);
     });
 
     it("renders with the child data", function () {

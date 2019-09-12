@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../card/card.js';
 import BlockContent from '../blockContent/BlockContent.js';
-import BlockTitle from '../blockTitle/blockTitle.js';
+import BlockTitle from '../blockTitle/BlockTitle.js';
 import './contact.less';
 import PropTypes from 'prop-types';
 
