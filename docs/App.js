@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.less';
+import { HashRouter, Route } from 'react-router-dom'
 import AddContactFrom from './containers/addContactForm/addContactForm.js';
 import MainSection from 'components/mainSection/mainSection.js';
 // import Container from 'components/container/Container.js';
@@ -17,6 +18,8 @@ import ListItem from 'components/listItem/listItem.js';
 import ListItemSecondary from 'components/listItemSecondary/listItemSecondary.js';
 import ListItemIcon from 'components/listItemIcon/ListItemIcon.js';
 import Paper from 'components/paper/Paper.js';
+import Home from './views/home/Home.js';
+import GridView from './views/gridView/GridView.js';
 
 class App extends Component {
   constructor(props){
@@ -75,23 +78,10 @@ class App extends Component {
           </List>
         </Drawer>
         <MainSection className="form-section">
-          <Grid container vMargin="8">
-            <Paper>
-              <h2>test header</h2>
-              <h3>this is the test subheader</h3>
-              <p>Lorem ipsum dolor amet kinfolk chambray quinoa, tousled dreamcatcher unicorn irony. Skateboard normcore man braid quinoa waistcoat everyday carry. Paleo listicle hexagon, seitan thundercats poke normcore messenger bag deep v. Tattooed jean shorts plaid, </p>
-            </Paper>
-          </Grid>
-          <Grid container>
-            <Grid row>
-              <Grid col sm="12" md="6" offsetMd="3">
-                <AddContactFrom addContact={this.addContact} updatePendingCard={this.updatePendingCard} />
-              </Grid>
-            </Grid>
-            <Grid row>
-              <CardList cards={this.state.cardList} pendingCard={this.state.pendingCard} />
-            </Grid>
-          </Grid>
+          <HashRouter>
+            <Route exact path="/" component={props => <Home {...props}/>}/>
+            <Route exact path="/grid" component={props => <GridView {...props} />} />
+          </HashRouter>
         </MainSection>
       </DrawerContainer>
     );
