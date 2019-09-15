@@ -1,10 +1,12 @@
+@import '../_themeStyles/colors.less';
+
 .secondary-action {
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border: none;
-    background-color: transparent;
+    background-color: @surface;
     outline: none;
     padding: 0 8px;
     color: #fff;
@@ -13,20 +15,6 @@
     top: 0;
     bottom: 0;
     right: 0;
-    // &--light {
-    //     svg {
-    //         fill: #fff;
-    //     }
-    // }
-    // &--disabled {
-    //     cursor: not-allowed;
-    // }
-    // &--first {
-    //     padding-left: 16px;
-    // }
-    // &--last {
-    //     padding-right: 16px;
-    // }
     svg {
         display: block;
         width: 28px;

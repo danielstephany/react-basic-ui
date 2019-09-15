@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Grid from 'components/grid/Grid.js';
 
 
 class GridView extends Component {

@@ -7,21 +7,16 @@
     display: block;
     align-items: center;
     position: relative;
-    &--no-cta {
+    padding: 8px @horizontal-spacing;
+    &--action {
         display: flex;
-        padding: 8px @horizontal-spacing;
+        padding: 0;
     }
-    &--link > a,
-    &--button > button:first-of-type {
-        outline: none;
-        border: none;
-        width: 100%;
-        background-color: @primary-bg;
-        display: flex;
-        padding: 8px @horizontal-spacing;
-        cursor: pointer;
+   
+    &--button {
+        background-color: @surface;
         &:hover {
-            background-color: darken(@primary-bg, 6%);
+            background-color: darken(@surface, 6%);
         }
     }
     &--with-secondary {

@@ -1,0 +1,23 @@
+@import '../_themeStyles/spacing.less';
+@import '../_themeStyles/colors.less';
+
+.rbui-list-item-link {
+    outline: none;
+    border: none;
+    background-color: @surface;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    outline: none; 
+    width: 100%;
+    display: flex;
+    padding: 8px @horizontal-spacing;
+    font-size: inherit;
+    color: @onBackground;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: darken(@surface, 8%);
+    }
+}

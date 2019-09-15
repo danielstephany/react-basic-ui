@@ -5,6 +5,8 @@ const merge = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const getStyleLoaders = require('./utils/getStyleLoaders.js');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 let commonChunkName;
 
 if(common.commonChunkName){
@@ -29,13 +31,7 @@ module.exports = merge(common, {
                 }
             },
             {
-                test: /\.css$/,
-                use: getStyleLoaders({
-                    importLoaders: 1
-                }, true)
-            },
-            {
-                test: /\.less$/,
+                test: /\.(less|css)$/,
                 use: getStyleLoaders({
                     importLoaders: 2,
                     sourceMap: true
@@ -76,6 +72,9 @@ module.exports = merge(common, {
     plugins: [
         new CaseSensitivePathsPlugin(),
         new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: "css/[name].min.css"
+        }),
         ...htmlFiles
     ],
     devServer: {

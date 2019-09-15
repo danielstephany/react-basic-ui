@@ -44,23 +44,25 @@ class App extends Component {
 
   render() {
     return (
-      <DrawerContainer>
-        <AppHeader ref={(header) => { this.header = header } } onClick={()=> {console.log(this.header)}}>
-          <Grid container noGutters >
-            <Grid row>
-              <IconButton light first onClick={() => { this.drawerToggle() }}><Menu /></IconButton>
-              <Grid col xs="2"><h2>Logo</h2></Grid>
+      <HashRouter>
+        <DrawerContainer>
+          <AppHeader ref={(header) => { this.header = header } } onClick={()=> {console.log(this.header)}}>
+            <Grid container noGutters >
+              <Grid row>
+                <IconButton light first onClick={() => { this.drawerToggle() }}><Menu /></IconButton>
+                <Grid col xs="2"><h2>Logo</h2></Grid>
+              </Grid>
             </Grid>
-          </Grid>
-        </AppHeader>
-        <MainDrawer drawerToggle={this.drawerToggle} drawerOpen={this.state.drawerOpen} />
-        <MainSection className="form-section">
-          <HashRouter>
-            <Route exact path="/" component={props => <Home {...props}/>}/>
-            <Route exact path="/grid" component={props => <GridView {...props} />} />
-          </HashRouter>
-        </MainSection>
-      </DrawerContainer>
+          </AppHeader>
+          <MainDrawer drawerToggle={this.drawerToggle} drawerOpen={this.state.drawerOpen} />
+          <MainSection className="form-section">
+        
+              <Route exact path="/" component={props => <Home {...props}/>}/>
+              <Route exact path="/grid" component={props => <GridView {...props} />} />
+    
+          </MainSection>
+        </DrawerContainer>
+      </HashRouter>
     );
   }
 }
