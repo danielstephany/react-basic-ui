@@ -14,7 +14,7 @@ import IconButton from 'components/iconButton/iconButton.js';
 import Menu from 'components/icons/menu.js';
 import List from 'components/list/list.js';
 import ListItem from 'components/listItem/listItem.js';
-import ListItemSecondary from 'components/listItemSecondary/listItemSecondary.js';
+import ListItemSecondary from 'components/listItemSecondary/ListItemSecondary.js';
 import ListItemIcon from 'components/listItemIcon/ListItemIcon.js';
 import Paper from 'components/paper/Paper.js';
 

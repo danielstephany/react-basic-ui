@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Drawer from 'components/drawer/drawer.js';
 import List from 'components/list/list.js';
 import ListItem from 'components/listItem/listItem.js';
-import ListItemSecondary from 'components/listItemSecondary/listItemSecondary.js';
+import ListItemSecondary from 'components/listItemSecondary/ListItemSecondary.js';
 import ListItemIcon from 'components/listItemIcon/ListItemIcon.js';
 import ListItemAction from 'components/listItemAction/ListItemAction.js';
 import Menu from 'components/icons/menu.js';

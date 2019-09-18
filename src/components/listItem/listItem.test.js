@@ -1,6 +1,6 @@
 import React from 'react';
 import ListItem from './listItem.js';
-import ListItemSecondary from '../listItemSecondary/listItemSecondary.js';
+import ListItemSecondary from '../listItemSecondary/ListItemSecondary.js';
 import { shallow, mount } from 'enzyme';
 
 describe('ListItem unit tests', function(){
