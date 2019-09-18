@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Drawer from 'components/drawer/drawer.js';
-import List from 'components/list/list.js';
-import ListItem from 'components/listItem/listItem.js';
+import List from 'components/list/List.js';
+import ListItem from 'components/listItem/ListItem.js';
 import ListItemSecondary from 'components/listItemSecondary/ListItemSecondary.js';
 import ListItemIcon from 'components/listItemIcon/ListItemIcon.js';
 import ListItemAction from 'components/listItemAction/ListItemAction.js';
@@ -20,6 +20,9 @@ const MainDrawer = (props) => {
                 </ListItem>
                 <ListItem hasAction >
                     <ListItemAction component={NavLink} to="/grid" >Grid</ListItemAction>
+                </ListItem>
+                <ListItem hasAction >
+                    <ListItemAction component={NavLink} to="/list" >List</ListItemAction>
                 </ListItem>
                 <ListItem>link 1</ListItem>
                 <ListItem>link 2<ListItemSecondary> <Menu /> </ListItemSecondary></ListItem>
