@@ -16,13 +16,13 @@ const MainDrawer = (props) => {
         <Drawer transitionTime={250} maxWidth={400} slideFrom="left" preventBodyScroll={false} drawerToggle={props.drawerToggle} isOpen={props.drawerOpen}>
             <List>
                 <ListItem hasAction >
-                    <ListItemAction component={NavLink} to="/" >Home</ListItemAction>
+                    <ListItemAction component={NavLink} to="/" onClick={props.drawerToggle}>Home</ListItemAction>
                 </ListItem>
                 <ListItem hasAction >
-                    <ListItemAction component={NavLink} to="/grid" >Grid</ListItemAction>
+                    <ListItemAction component={NavLink} to="/grid" onClick={props.drawerToggle}>Grid</ListItemAction>
                 </ListItem>
                 <ListItem hasAction >
-                    <ListItemAction component={NavLink} to="/list" >List</ListItemAction>
+                    <ListItemAction component={NavLink} to="/list" onClick={props.drawerToggle}>List</ListItemAction>
                 </ListItem>
                 <ListItem>link 1</ListItem>
                 <ListItem>link 2<ListItemSecondary> <Menu /> </ListItemSecondary></ListItem>

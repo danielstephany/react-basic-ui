@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
 import './App.less';
 import { HashRouter, Route } from 'react-router-dom'
-import AddContactFrom from './containers/addContactForm/addContactForm.js';
 import MainSection from 'components/mainSection/mainSection.js';
-// import Container from 'components/container/Container.js';
-// import Col from 'components/col/Col.js';
-// import Row from 'components/row/Row.js';
 import Grid from 'components/grid/Grid.js';
-import CardList from './containers/cardList/cardList.js';
 import DrawerContainer from 'components/drawerContainer/DrawerContainer.js';
 import AppHeader from 'components/appHeader/AppHeader.js';
 import IconButton from 'components/iconButton/iconButton.js';
 import Menu from 'components/icons/menu.js';
-import Paper from 'components/paper/Paper.js';
 import Home from './views/home/Home.js';
 import GridView from './views/gridView/GridView.js';
 import MainDrawer from './containers/mainDrawer/MainDrawer.js';
+import ListView from './views/listView/ListView.js';
 
 class App extends Component {
   constructor(props){
@@ -57,8 +52,9 @@ class App extends Component {
           <MainDrawer drawerToggle={this.drawerToggle} drawerOpen={this.state.drawerOpen} />
           <MainSection className="form-section">
         
-              <Route exact path="/" component={props => <Home {...props}/>}/>
-              <Route exact path="/grid" component={props => <GridView {...props} />} />
+            <Route exact path="/" component={props => <Home {...props}/>}/>
+            <Route exact path="/grid" component={props => <GridView {...props} />} />
+            <Route exact path="/list" component={props => <ListView {...props} />} />
     
           </MainSection>
         </DrawerContainer>
