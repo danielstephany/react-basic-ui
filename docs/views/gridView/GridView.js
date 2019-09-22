@@ -6,6 +6,8 @@ import Table from 'components/table/Table.js';
 import TableRow from 'components/tableRow/TableRow.js';
 import TableHeader from 'components/tableHeader/TableHeader.js';
 import TableCell from 'components/tableCell/TableCell.js';
+import TableContainer from 'components/tableContainer/TableContainer.js';
+import Paper from 'components/paper/Paper.js';
 
 class GridView extends Component {
 
@@ -18,24 +20,28 @@ class GridView extends Component {
                         <p>Using the grid component will allow you to develop a all kinds of layouts that are responsive.</p>
                         <h3>break points</h3>
                         <p>Out of the box the grid uses pre defined break points that you can use to rearange your layout for multible screen sizes.</p>
-                        <Table>
-                            <TableRow>
-                                <TableHeader>sizes</TableHeader>
-                                <TableHeader>xs</TableHeader>
-                                <TableHeader>sm</TableHeader>
-                                <TableHeader>md</TableHeader>
-                                <TableHeader>lg</TableHeader>
-                                <TableHeader>xl</TableHeader>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>break points</TableCell>
-                                <TableCell>&lt;&eq;576px</TableCell>
-                                <TableCell>577px - 768px</TableCell>
-                                <TableCell>769px - 998px</TableCell>
-                                <TableCell>998px - 1200px</TableCell>
-                                <TableCell>&gt;1200px</TableCell>
-                            </TableRow>
-                        </Table>
+                        <Paper noPad>
+                            <TableContainer>
+                                <Table>
+                                    <TableRow>
+                                        <TableHeader>sizes</TableHeader>
+                                        <TableHeader>xs</TableHeader>
+                                        <TableHeader>sm</TableHeader>
+                                        <TableHeader>md</TableHeader>
+                                        <TableHeader>lg</TableHeader>
+                                        <TableHeader>xl</TableHeader>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell>break points</TableCell>
+                                        <TableCell>&lt;=576px</TableCell>
+                                        <TableCell>577px - 768px</TableCell>
+                                        <TableCell>769px - 998px</TableCell>
+                                        <TableCell>998px - 1200px</TableCell>
+                                        <TableCell>&gt;1200px</TableCell>
+                                    </TableRow>
+                                </Table>
+                            </TableContainer>
+                        </Paper>
                         <Highlight className="testClass" >
                         {gridtxt}
                         </Highlight>
