@@ -1,0 +1,18 @@
+import grid form './grid';
+
+class Test extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            item: "tests"
+        }
+
+        render = () => {
+            return(
+                <grid to="thest" top={true} >
+                    <span>{this.state.item}</span>
+                <grid>
+            );
+        }
+    }
+}

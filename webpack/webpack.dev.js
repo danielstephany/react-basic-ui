@@ -54,6 +54,12 @@ module.exports = merge(common, {
                         outputPath: 'assets/fonts',
                     }
                 }
+            },
+            {
+                test: /\.(txt|md)$/,
+                use: {
+                    loader: 'raw-loader'
+                }
             }
         ]
     },

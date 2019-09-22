@@ -63,6 +63,12 @@ module.exports = merge(common, {
                 }
             },
             {
+                test: /\.(txt|md)$/,
+                use: {
+                    loader: 'raw-loader'
+                }
+            },
+            {
                 test: /\.(html)$/,
                 include: path.join(__dirname, 'src/views'),
                 use: [
