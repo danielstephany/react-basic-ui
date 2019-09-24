@@ -45,7 +45,7 @@ class App extends Component {
             <Grid container noGutters >
               <Grid row>
                 <IconButton light first onClick={() => { this.drawerToggle() }}><Menu /></IconButton>
-                <Grid col xs="2"><h2>Logo</h2></Grid>
+                <Grid col xs="3"><h2>React Basic UI</h2></Grid>
               </Grid>
             </Grid>
           </AppHeader>
