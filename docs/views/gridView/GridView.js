@@ -3,8 +3,10 @@ import Grid from 'components/grid/Grid.js';
 import Highlight from 'react-highlight'
 import gridtxt from './grid.txt';
 import Table from 'components/table/Table.js';
+import TableBody from 'components/tableBody/TableBody.js';
+import TableHead from 'components/tableHead/TableHead.js';
 import TableRow from 'components/tableRow/TableRow.js';
-import TableHeader from 'components/tableHeader/TableHeader.js';
+import TableHeadCell from 'components/tableHeadCell/TableHeadCell.js';
 import TableCell from 'components/tableCell/TableCell.js';
 import TableContainer from 'components/tableContainer/TableContainer.js';
 import Paper from 'components/paper/Paper.js';
@@ -23,22 +25,26 @@ class GridView extends Component {
                         <Paper noPad>
                             <TableContainer>
                                 <Table>
-                                    <TableRow>
-                                        <TableHeader>sizes</TableHeader>
-                                        <TableHeader>xs</TableHeader>
-                                        <TableHeader>sm</TableHeader>
-                                        <TableHeader>md</TableHeader>
-                                        <TableHeader>lg</TableHeader>
-                                        <TableHeader>xl</TableHeader>
-                                    </TableRow>
-                                    <TableRow>
-                                        <TableCell>break points</TableCell>
-                                        <TableCell>&lt;=576px</TableCell>
-                                        <TableCell>577px - 768px</TableCell>
-                                        <TableCell>769px - 998px</TableCell>
-                                        <TableCell>998px - 1200px</TableCell>
-                                        <TableCell>&gt;1200px</TableCell>
-                                    </TableRow>
+                                    <TableHead>
+                                        <TableRow>
+                                            <TableHeadCell>sizes</TableHeadCell>
+                                            <TableHeadCell>xs</TableHeadCell>
+                                            <TableHeadCell>sm</TableHeadCell>
+                                            <TableHeadCell>md</TableHeadCell>
+                                            <TableHeadCell>lg</TableHeadCell>
+                                            <TableHeadCell>xl</TableHeadCell>
+                                        </TableRow>
+                                    </TableHead>
+                                    <TableBody>
+                                        <TableRow>
+                                            <TableCell>break points</TableCell>
+                                            <TableCell>&lt;=576px</TableCell>
+                                            <TableCell>577px - 768px</TableCell>
+                                            <TableCell>769px - 998px</TableCell>
+                                            <TableCell>998px - 1200px</TableCell>
+                                            <TableCell>&gt;1200px</TableCell>
+                                        </TableRow>
+                                    </TableBody>
                                 </Table>
                             </TableContainer>
                         </Paper>
