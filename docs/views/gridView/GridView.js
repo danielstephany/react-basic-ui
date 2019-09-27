@@ -22,7 +22,7 @@ class GridView extends Component {
                         <p>Using the grid component will allow you to develop a all kinds of layouts that are responsive.</p>
                         <h3>break points</h3>
                         <p>Out of the box the grid uses pre defined break points that you can use to rearange your layout for multible screen sizes.</p>
-                        <Paper noPad>
+                   
                             <TableContainer>
                                 <Table>
                                     <TableHead>
@@ -47,7 +47,7 @@ class GridView extends Component {
                                     </TableBody>
                                 </Table>
                             </TableContainer>
-                        </Paper>
+                       
                         <Highlight className="testClass" >
                         {gridtxt}
                         </Highlight>
