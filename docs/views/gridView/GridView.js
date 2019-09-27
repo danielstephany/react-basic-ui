@@ -44,6 +44,14 @@ class GridView extends Component {
                                             <TableCell>998px - 1200px</TableCell>
                                             <TableCell>&gt;1200px</TableCell>
                                         </TableRow>
+                                        <TableRow>
+                                            <TableCell>break points</TableCell>
+                                            <TableCell>&lt;=576px</TableCell>
+                                            <TableCell>577px - 768px</TableCell>
+                                            <TableCell>769px - 998px</TableCell>
+                                            <TableCell>998px - 1200px</TableCell>
+                                            <TableCell>&gt;1200px</TableCell>
+                                        </TableRow>
                                     </TableBody>
                                 </Table>
                             </TableContainer>
