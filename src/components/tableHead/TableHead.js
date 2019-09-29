@@ -1,5 +1,4 @@
 import React from 'react';
-import './tableHead.less';
 
 const TableHead = React.forwardRef(function tableHead(props, ref) {
     const { className, children, ...others } = props;

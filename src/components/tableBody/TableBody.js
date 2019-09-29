@@ -1,9 +1,8 @@
 import React from 'react';
-import './tableBody.less';
 
 const TableBody = React.forwardRef(function tableBody(props, ref) {
     const { className, children, ...others } = props;
-    const classes = className ? "rbui-table-body " + className : "rbui-table-body";
+    const classes = className ? "rbui-table__body " + className : "rbui-table__body";
     return (
         <tbody className={classes} ref={ref} {...others}>{children}</tbody>
     );

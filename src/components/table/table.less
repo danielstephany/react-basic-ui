@@ -1,10 +1,44 @@
+@import '../_themeStyles/colors.less';
 
 .rbui-table {
+    width: 100%;
     box-sizing: border-box;
-    border-collapse: collapse;
+    border-spacing: 0;
+    border-collapse: seperate;
     min-width: 100%;
     font-size: 14px;
-    &--sticky-col-labels {
+    margin: auto;
+    &__head,
+    &__body {
+        box-sizing: border-box;
+        .rbui-table-row:last-child,
+        .rbui-table-row:only-child {
+            border: none;
+        }
+    }
+    &__row {
+        box-sizing: border-box;
+    }
+    &__head-cell {
+        box-sizing: border-box;
+        border-bottom: 1px solid @border;
+        padding: 4px 8px;
+        text-align: left;
+    }
+    &__cell {
+        box-sizing: border-box;
+        padding: 6px 8px;
+        white-space: nowrap;
+    }
+    &__head-cell,
+    &__cell {
+        border-right: 1px solid #eee;
+        border-bottom: 1px solid @border;
+         &:last-child {
+            border-right: none;
+        }
+    }
+     &--sticky-col-labels {
         .rbui-table__head-cell:first-child,
         .rbui-table__cell:first-child {
             position: sticky;
@@ -16,6 +50,7 @@
     &--sticky-header {
         .rbui-table__head-cell:first-child,
         .rbui-table__head-cell {
+             border-bottom: 1px solid @border;
             position: sticky;
             top: 0px;
             z-index: 100;

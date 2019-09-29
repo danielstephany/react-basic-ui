@@ -1,5 +1,4 @@
 import React from 'react';
-import './tableCell.less';
 
 const TableCell = React.forwardRef(function tableCell(props, ref){
     const {className, children, ...others} = props;
