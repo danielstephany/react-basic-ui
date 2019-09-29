@@ -14,6 +14,7 @@ import Paper from 'components/paper/Paper.js';
 class GridView extends Component {
 
     render = () => {
+        const style = {overflowY: "auto", height: '120px'}
         return(
             <Grid container vMargin="8">
                 <Grid row>
@@ -23,8 +24,8 @@ class GridView extends Component {
                         <h3>break points</h3>
                         <p>Out of the box the grid uses pre defined break points that you can use to rearange your layout for multible screen sizes.</p>
                    
-                            <TableContainer>
-                                <Table>
+                            <TableContainer style={style}>
+                                <Table stickyLabels stickyHeader>
                                     <TableHead>
                                         <TableRow>
                                             <TableHeadCell>sizes</TableHeadCell>
@@ -36,6 +37,22 @@ class GridView extends Component {
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
+                                        <TableRow>
+                                            <TableCell>break points</TableCell>
+                                            <TableCell>&lt;=576px</TableCell>
+                                            <TableCell>577px - 768px</TableCell>
+                                            <TableCell>769px - 998px</TableCell>
+                                            <TableCell>998px - 1200px</TableCell>
+                                            <TableCell>&gt;1200px</TableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <TableCell>break points</TableCell>
+                                            <TableCell>&lt;=576px</TableCell>
+                                            <TableCell>577px - 768px</TableCell>
+                                            <TableCell>769px - 998px</TableCell>
+                                            <TableCell>998px - 1200px</TableCell>
+                                            <TableCell>&gt;1200px</TableCell>
+                                        </TableRow>
                                         <TableRow>
                                             <TableCell>break points</TableCell>
                                             <TableCell>&lt;=576px</TableCell>

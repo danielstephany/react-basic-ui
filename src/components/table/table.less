@@ -4,4 +4,25 @@
     border-collapse: collapse;
     min-width: 100%;
     font-size: 14px;
+    &--sticky-col-labels {
+        .rbui-table__head-cell:first-child,
+        .rbui-table__cell:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 100;
+            background: #fff;
+        }
+    }
+    &--sticky-header {
+        .rbui-table__head-cell:first-child,
+        .rbui-table__head-cell {
+            position: sticky;
+            top: 0px;
+            z-index: 100;
+            background: #fff;
+        }
+        .rbui-table__head-cell:first-child {
+              z-index: 200;
+        }
+    }
 }
