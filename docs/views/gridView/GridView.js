@@ -9,7 +9,6 @@ import TableRow from 'components/tableRow/TableRow.js';
 import TableHeadCell from 'components/tableHeadCell/TableHeadCell.js';
 import TableCell from 'components/tableCell/TableCell.js';
 import TableContainer from 'components/tableContainer/TableContainer.js';
-import Paper from 'components/paper/Paper.js';
 
 class GridView extends Component {
 
@@ -25,7 +24,7 @@ class GridView extends Component {
                         <p>Out of the box the grid uses pre defined break points that you can use to rearange your layout for multible screen sizes.</p>
                    
                             <TableContainer style={style}>
-                                <Table stickyLabels stickyHeader>
+                                <Table>
                                     <TableHead>
                                         <TableRow>
                                             <TableHeadCell>sizes</TableHeadCell>

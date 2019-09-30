@@ -28,7 +28,6 @@
     &__cell {
         box-sizing: border-box;
         padding: 6px 8px;
-        white-space: nowrap;
     }
     &__head-cell,
     &__cell {
@@ -58,6 +57,12 @@
         }
         .rbui-table__head-cell:first-child {
               z-index: 200;
+        }
+    }
+    &--nowrap {
+        .rbui-table__head-cell,
+        .rbui-table__cell {
+            white-space: nowrap;
         }
     }
 }
