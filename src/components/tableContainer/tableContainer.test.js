@@ -11,4 +11,9 @@ describe('table test suite', function(){
         const wrap = shallow(<TableContainer className="test-class"></TableContainer>);
         expect(wrap.hasClass('test-class')).toBe(true);
     });
+
+    it('renders with children', () => {
+        const wrap = shallow(<TableContainer>content</TableContainer>);
+        expect(wrap.text()).toBe("content");
+    });
 });
