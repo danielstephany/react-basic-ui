@@ -3,7 +3,7 @@ import Card from 'components/card/card.js';
 import BlockTitle from 'components/blockTitle/BlockTitle.js';
 import BlockContent from 'components/blockContent/BlockContent.js';
 import FormItem from 'components/formItem/formItem.js';
-import FormatedInput from 'components/formatedInput/formatedInput.js';
+import TextBox from 'components/textBox/TextBox.js';
 import Form from 'components/form/form.js';
 import Button from 'components/button/button.js';
 import { validateInputSet, validateInputOnBlur} from '../../utils/utils.js';
@@ -59,7 +59,7 @@ class AddContactForm extends Component {
                 </BlockTitle>
                 <BlockContent>
                     <Form onSubmit={this.handleSubmit} noValidate={true}>
-                        <FormatedInput 
+                        <TextBox 
                             onBlur={this.validateInputOnBlur({ formErrorProp: "fullName", name: "full name" })} 
                             ref={(input) => { this.fullNameInput = input }} 
                             label="Full Name" 
@@ -69,7 +69,7 @@ class AddContactForm extends Component {
                             required={true} 
                             errMessage={this.state.formError.fullName} 
                             onChange={this.updateInput("fullName")} />
-                        <FormatedInput 
+                        <TextBox 
                             onBlur={this.validateInputOnBlur({ formErrorProp: "email", name: "email" })} 
                             ref={(input) => { this.emailInput = input }} 
                             label="Email" 
@@ -79,7 +79,7 @@ class AddContactForm extends Component {
                             required={true} 
                             errMessage={this.state.formError.email} 
                             onChange={this.updateInput("email")} />
-                        <FormatedInput 
+                        <TextBox 
                             onBlur={this.validateInputOnBlur({ formErrorProp: "phone", name: "phone" })} 
                             ref={(input) => { this.phoneInput = input }} 
                             label="Phone" 

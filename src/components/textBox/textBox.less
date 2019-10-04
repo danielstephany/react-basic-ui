@@ -1,6 +1,6 @@
 @import "../_themeStyles/colors.less";
 
-.form-item {
+.rbui-form-item {
     label {
         box-sizing: border-box;
         display: block;
@@ -10,7 +10,7 @@
     input {
         box-sizing: border-box;
         display: block;
-        width: 100%;
+        width: 200px;
         border-radius: 4px;
         border: 1px solid #999;
         padding: 6px;
@@ -19,6 +19,12 @@
     }
     &--error {
         border-color: @error;
+    }
+    &--fullwidth {
+        width: 100%;
+        input {
+            width: 100%;
+        }
     }
     .inline-error {
         box-sizing: border-box;

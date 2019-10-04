@@ -1,14 +1,14 @@
 import React from 'react';
-import TableHeaderCell from './TableHeaderCell.js';
+import TableHeadCell from './TableHeadCell.js';
 import {shallow} from 'enzyme';
 
 describe('TableRow test suite', function(){
     it('renders without crashing', () => {
-        const wrap = shallow(<TableHeaderCell/>);
+        const wrap = shallow(<TableHeadCell/>);
     });
 
     it('render with the added class of test-class', () => {
-        const wrap = shallow(<TableHeaderCell className="test-class"></TableHeaderCell>);
+        const wrap = shallow(<TableHeadCell className="test-class"></TableHeadCell>);
         expect(wrap.hasClass('test-class')).toBe(true)
     });
 });
