@@ -1,4 +1,4 @@
-import grid form './grid';
+import grid from './grid';
 
 class Test extends Component {
     constructor(props){

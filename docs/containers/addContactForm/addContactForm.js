@@ -4,7 +4,7 @@ import BlockTitle from 'components/blockTitle/BlockTitle.js';
 import BlockContent from 'components/blockContent/BlockContent.js';
 import FormItem from 'components/formItem/formItem.js';
 import TextBox from 'components/textBox/TextBox.js';
-import Form from 'components/form/form.js';
+import Form from 'components/form/Form.js';
 import Button from 'components/button/button.js';
 import { validateInputSet, validateInputOnBlur} from '../../utils/utils.js';
 
