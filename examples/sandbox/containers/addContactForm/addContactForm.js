@@ -89,7 +89,7 @@ class AddContactForm extends Component {
                             required={true} 
                             errMessage={this.state.formError.phone} 
                             onChange={this.updateInput("phone")} />
-                        <FormItem>
+                        <FormItem fullWidth  alignItems="right">
                             <Button type="submit" >Add contact</Button>
                         </FormItem>
                     </Form>
