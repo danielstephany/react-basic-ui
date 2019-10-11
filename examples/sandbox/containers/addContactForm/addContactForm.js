@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Card from 'components/card/card.js';
 import BlockTitle from 'components/blockTitle/BlockTitle.js';
 import BlockContent from 'components/blockContent/BlockContent.js';
-import FormItem from 'components/formItem/formItem.js';
+import FormItem from 'components/formItem/FormItem.js';
 import TextBox from 'components/textBox/TextBox.js';
 import Form from 'components/form/Form.js';
 import Button from 'components/button/button.js';

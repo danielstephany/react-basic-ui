@@ -1,5 +1,5 @@
 import React from 'react';
-import FormItem from './formItem.js';
+import FormItem from './FormItem.js';
 import { shallow } from 'enzyme'
 
 describe("tests for FormItem", function () {

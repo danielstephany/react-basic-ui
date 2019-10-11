@@ -66,11 +66,11 @@ class App extends Component {
             </List>
           </List>
           <List>
-            <ListItem link >
+            <ListItem>
               <a href="./test" >link 4</a>
               <ListItemSecondary><Menu /></ListItemSecondary>
             </ListItem>
-            <ListItem button ><button>link 5</button><ListItemSecondary><Menu /></ListItemSecondary></ListItem>
+            <ListItem><button>link 5</button><ListItemSecondary><Menu /></ListItemSecondary></ListItem>
             <ListItem><ListItemIcon> <Menu /> </ListItemIcon>link 6<ListItemSecondary><Menu /></ListItemSecondary></ListItem>
           </List>
         </Drawer>

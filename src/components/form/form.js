@@ -3,7 +3,7 @@ import './form.less';
 
 export default React.forwardRef(function form(props, ref) {
     const {className, ...others} = props
-    const extraClass = className ? className : '';
+    const classes = className ? 'rbui-form ' + className : 'rbui-form';
     
-    return <form className={extraClass} ref={ref} {...others} >{props.children}</form>
+    return <form className={classes} ref={ref} {...others} >{props.children}</form>
 });

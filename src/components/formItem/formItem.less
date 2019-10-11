@@ -1,7 +1,12 @@
+@import '../_themeStyles/spacing.less';
+
 .rbui-form-item {
     box-sizing: border-box;
     display: inline-block;
     font-size: 16px;
-    padding: 0 15px;
+    padding: 0 @gutter-spacing;
     margin-bottom: 10px;
+    &--fullwidth {
+        display: block;
+    }
 }

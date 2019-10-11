@@ -3,9 +3,14 @@ import PropTypes from "prop-types";
 import './formItem.less';
 
 const FormItem = React.forwardRef(function(props, ref) {
-    const {className, children, ...others} = props;
-    const formItemClasses = className ? `form-item ${className}` : 'form-item';
-    return <div className={formItemClasses} ref={ref} {...others} >{children}</div>;
+    const {className, children, fullWidth, ...others} = props;
+    const classes = className ? `rbui-form-item ${className}` : 'rbui-form-item';
+
+    if (fullWidth){
+        classes += 'rbui-form-item--full-width';
+    }
+
+    return <div className={classes} ref={ref} {...others} >{children}</div>;
 });
 
 FormItem.propTypes = {

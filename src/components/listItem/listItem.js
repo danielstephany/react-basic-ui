@@ -2,7 +2,7 @@ import React from 'react';
 import './listItem.less';
 import hasChild from '../_utils/hasChild/hasChild.js';
 
-const ListItem = React.forwardRef(function(props, ref){
+const ListItem = React.forwardRef(function listItem (props, ref){
     const {children, className, hasAction, ...others} = props;
     let classes = className ? 'list-item ' + className : 'list-item';
 

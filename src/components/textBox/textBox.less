@@ -17,8 +17,10 @@
         margin: 0 0 5px;
         font-size: inherit;
     }
-    &--error {
-        border-color: @error;
+    &.has-error {
+        input {
+            border-color: @error;
+        }
     }
     &--fullwidth {
         width: 100%;
