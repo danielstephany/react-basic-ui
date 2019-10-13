@@ -60,6 +60,7 @@ class AddContactForm extends Component {
                 <BlockContent>
                     <Form onSubmit={this.handleSubmit} noValidate={true}>
                         <TextBox 
+                            fullWidth
                             onBlur={this.validateInputOnBlur({ formErrorProp: "fullName", name: "full name" })} 
                             ref={(input) => { this.fullNameInput = input }} 
                             label="Full Name" 
@@ -70,6 +71,7 @@ class AddContactForm extends Component {
                             errMessage={this.state.formError.fullName} 
                             onChange={this.updateInput("fullName")} />
                         <TextBox 
+                            fullWidth
                             onBlur={this.validateInputOnBlur({ formErrorProp: "email", name: "email" })} 
                             ref={(input) => { this.emailInput = input }} 
                             label="Email" 
@@ -80,6 +82,7 @@ class AddContactForm extends Component {
                             errMessage={this.state.formError.email} 
                             onChange={this.updateInput("email")} />
                         <TextBox 
+                            fullWidth
                             onBlur={this.validateInputOnBlur({ formErrorProp: "phone", name: "phone" })} 
                             ref={(input) => { this.phoneInput = input }} 
                             label="Phone" 

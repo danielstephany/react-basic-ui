@@ -6,9 +6,6 @@
     font-size: 16px;
     padding: 0 @gutter-spacing;
     margin-bottom: 10px;
-    &--full-width {
-        display: block;
-    }
     &--align-left {
         text-align: left;
     }
@@ -17,5 +14,12 @@
     }
     &--align-center {
         text-align: center;
+    }
+    &--full-width {
+        display: block;
+        input {
+            display: block;
+            width: 100%;
+        }
     }
 }
