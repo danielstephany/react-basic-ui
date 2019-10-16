@@ -1,6 +1,7 @@
 import React from 'react';
 import './textBox.less';
 import FormItem from  '../formItem/FormItem.js';
+import BaseLabel from '../baseLabel/BaseLabel.js';
 import BaseInput from '../baseInput/BaseInput.js';
 
 const TextBox = React.forwardRef(function textBox(props, ref) {
@@ -13,7 +14,7 @@ const TextBox = React.forwardRef(function textBox(props, ref) {
   
     return (
         <FormItem fullWidth={!!fullWidth} className={classes}>
-            <label htmlFor={props.id ? props.id : ''}>{props.label}</label>
+            <BaseLabel htmlFor={props.id ? props.id : ''}>{props.label}</BaseLabel>
             <BaseInput ref={ref} {...others} />
             {errMessage ? <span className="inline-error">{errMessage}</span> : null}
         </FormItem>
