@@ -1,7 +1,7 @@
 import React from 'react';
 import './baseLabel.less';
 
-const BaseLabel = React.forwardRef(function baseLabel(props, rel){
+const BaseLabel = React.forwardRef(function baseLabel(props, ref){
     const {className, children, inline, ...others} = props;
     let classes = className ? 'rbui-label ' + className : 'rbui-label';
 
@@ -9,7 +9,7 @@ const BaseLabel = React.forwardRef(function baseLabel(props, rel){
         classes += ' rbui-label--inline';
     }
 
-    return <label className={classes} {...others}>{children}</label>
+    return <label className={classes} ref={ref} {...others}>{children}</label>
 });
 
 export default BaseLabel;
