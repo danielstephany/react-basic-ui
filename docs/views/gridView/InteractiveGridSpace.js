@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Grid from 'components/grid/Grid.js';
 import Paper from  'components/paper/Paper.js';
 import Form from 'components/form/Form.js';
+import BaseRadio from 'components/baseRadio/BaseRadio.js';
 
 const InteractiveGridSpace = () => {
     const [spacingInput, setSpacingInput] = useState('8');
@@ -10,6 +11,10 @@ const InteractiveGridSpace = () => {
     function setit(e){
         e.preventDefault();
         setSpacing(spacingInput);
+    }
+
+    function logit(e){
+        console.log(e.target.value);
     }
 
     return (
@@ -33,6 +38,7 @@ const InteractiveGridSpace = () => {
                             <Paper className="textc">
                                 <form onSubmit={setit}>
                                     <input type="number" min="0" max="10" value={spacingInput} onChange={(e)=> {setSpacingInput(e.target.value)}}/>
+                                    <BaseRadio onChange={logit}/>
                                 </form>
                             </Paper>
                         </Grid>

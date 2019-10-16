@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 class BaseRadio extends Component {
 
@@ -21,13 +21,23 @@ class BaseRadio extends Component {
     }
 
     render = () => {
-        const { className, ...others } = this.props;
+        const { className, forwardedRef, ...others } = this.props;
         const classes = className ? 'rbui-radio ' + className : 'rbui-radio';
+        let ref;
+
+        if (forwardedRef) {
+            ref = header => { this.header = header; forwardedRef(header); };
+        } else {
+            ref = header => { this.header = header; };
+        }
 
         return (
-            <div className={classes} onClick={this.simulateClick}>
-                <input type="radio" ref={input => { this.input = input; ref(input); }} {...others} />
+            <div className={classes} onClick={this.simulateClick} {...BaseRadio}>
+                <input className="rbui-radio__input" type="radio" ref={ref} {...others} />
+                <div className="rbui-radio__btn"></div>
             </div>
         );
     }
 }
+
+export default React.forwardRef(function baseRadio(props, ref) { return <BaseRadio {...props} forwardedRef={ref} /> });
