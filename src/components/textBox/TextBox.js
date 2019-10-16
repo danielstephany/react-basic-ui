@@ -5,7 +5,7 @@ import BaseInput from '../baseInput/BaseInput.js';
 
 const TextBox = React.forwardRef(function textBox(props, ref) {
     const { className, errMessage, fullWidth, ...others} = props;
-    let classes = '';
+    let classes = className ? className : '';
 
     if(errMessage){
         classes += ' has-error';

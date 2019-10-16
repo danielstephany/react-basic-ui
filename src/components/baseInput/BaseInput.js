@@ -10,7 +10,7 @@ const BaseInput = React.forwardRef(function baseInput(props, ref) {
 });
 
 BaseInput.propTypes = {
-    type: PropTypes.oneOf(["date", "datetime-local", "email", "hidden", "month", "number", "password", "range", "search", "submit", "tel", "text", "time", "url", "week"])
+    type: PropTypes.oneOf(["date", "datetime-local", "email", "hidden", "month", "number", "password", "range", "search", "submit", "tel", "text", "time", "url", "week", ""])
 }
 
 export default BaseInput;

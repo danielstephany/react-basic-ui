@@ -10,13 +10,13 @@ describe("tests for Textbox", function () {
     });
 
     it("renders with added class", function () {
-        const wrap = shallow(<Textbox className="test" onChange={changeHandler} />);
-        expect(wrap.hasClass('test')).toBe(true);
+        const wrap = shallow(<Textbox className="test" />);
+        expect(wrap.dive().hasClass('test')).toBe(true);
     });
 
     it("renders with added classes and default class", function () {
-        const wrap = shallow(<Textbox className="test" onChange={changeHandler} />);
-        expect(wrap.hasClass('rbui-textbox test')).toBe(true);
+        const wrap = shallow(<Textbox className="test" />);
+        expect(wrap.dive().hasClass('rbui-form-item test')).toBe(true);
     });
 
     it("renders with the proper input attributes", function () {
@@ -24,19 +24,19 @@ describe("tests for Textbox", function () {
             className="test"
             id={"testID"}
             name={"testName"}
-            type={"testType"}
+            type={"text"}
             value={"testValue"}
             onChange={changeHandler} />);
-        expect(wrap.find('input').html()).toBe("<input type=\"testType\" id=\"testID\" name=\"testName\" value=\"testValue\"/>");
+        expect(wrap.childAt(1).html()).toBe("<input type=\"text\" class=\"rbui-base-input\" id=\"testID\" name=\"testName\" value=\"testValue\"/>");
     });
 
-    it('render with the rbui-form-item--fullwidth class', function(){
-        const wrap = shallow(<Textbox fullwidth/>);
-        expect(wrap.hasClass('rbui-form-item--fullwidth')).toBe(true);
+    it('render with the rbui-form-item--full-width class', function(){
+        const wrap = shallow(<Textbox fullWidth={true}/>);
+        expect(wrap.dive().hasClass('rbui-form-item--full-width')).toBe(true);
     });
 
-    it('render with the rbui-form-item--error class', function(){
+    it('render with the has-error class', function(){
         const wrap = shallow(<Textbox errMessage="this is a error"/>);
-        expect(wrap.hasClass('rbui-form-item--error')).toBe(true);
+        expect(wrap.hasClass('has-error')).toBe(true);
     });
 });
