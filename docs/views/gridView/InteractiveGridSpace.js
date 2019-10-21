@@ -15,6 +15,7 @@ const InteractiveGridSpace = () => {
 
     function logit(e){
         console.log(e.target.value);
+        console.log('test');
     }
 
     return (
@@ -37,8 +38,11 @@ const InteractiveGridSpace = () => {
                         <Grid col xs="12">
                             <Paper className="textc">
                                 <form onSubmit={setit}>
-                                    <input type="number" min="0" max="10" value={spacingInput} onChange={(e)=> {setSpacingInput(e.target.value)}}/>
-                                    <BaseRadio onChange={logit}/>
+                                    {/* <input type="number" min="0" max="10" value={spacingInput} onChange={(e)=> {setSpacingInput(e.target.value)}}/> */}
+                                    <BaseRadio onChange={logit} name="test" />
+                                    <BaseRadio onChange={logit} name="test" />
+                                    <BaseRadio onChange={logit} name="test" />
+                                    <BaseRadio onChange={logit} name="test" />
                                 </form>
                             </Paper>
                         </Grid>

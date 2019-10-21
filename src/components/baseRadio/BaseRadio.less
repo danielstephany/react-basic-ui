@@ -1,0 +1,56 @@
+@import '../_themeStyles/colors.less';
+
+.rbui-radio {
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+    &__label {
+        box-sizing: border-box;
+        display: inline-block;
+    }
+    &__container {
+        box-sizing: border-box;
+        display: inline-block;
+        height: 18px;
+        width: 18px;
+        position: relative;
+        margin-left: 4px;
+    }
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    &__btn {
+        border-radius: 50%;
+        background: @background;
+        box-sizing: border-box;
+        content: '';
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid @border;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        Z-index: 2;
+        cursor: pointer;
+    }
+    &__btn::after {
+        background: @primary;
+        border-radius: 100px;
+        content: '';
+        display: inline-block;
+        height: 60%;
+        width: 60%;
+        opacity: 0;
+    }
+    &__input:checked ~ &__btn::after {
+        opacity: 1;
+    }
+}
