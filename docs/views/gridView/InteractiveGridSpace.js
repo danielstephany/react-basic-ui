@@ -39,10 +39,10 @@ const InteractiveGridSpace = () => {
                             <Paper className="textc">
                                 <form onSubmit={setit}>
                                     {/* <input type="number" min="0" max="10" value={spacingInput} onChange={(e)=> {setSpacingInput(e.target.value)}}/> */}
-                                    <BaseRadio onChange={logit} name="test" />
-                                    <BaseRadio onChange={logit} name="test" />
-                                    <BaseRadio onChange={logit} name="test" />
-                                    <BaseRadio onChange={logit} name="test" />
+                                    <BaseRadio onChange={logit} label="test1" name="test" />
+                                    <BaseRadio onChange={logit} label="test2" name="test" />
+                                    <BaseRadio onChange={logit} label="test3" name="test" />
+                                    <BaseRadio onChange={logit} label="test4" name="test" />
                                 </form>
                             </Paper>
                         </Grid>

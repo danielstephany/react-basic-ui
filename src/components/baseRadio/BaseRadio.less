@@ -6,23 +6,27 @@
     justify-content: center;
     align-items: center;
     padding: 0 16px;
+    cursor: pointer;
     &__label {
         box-sizing: border-box;
         display: inline-block;
     }
     &__container {
         box-sizing: border-box;
-        display: inline-block;
-        height: 18px;
-        width: 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        width: 20px;
         position: relative;
         margin-left: 4px;
     }
     &__input {
-        position: absolute;
-        top: 0;
-        left: 0;
+        margin: 0;
         z-index: 1;
+    }
+    &__input:focus {
+        outline: none;
     }
     &__btn {
         border-radius: 50%;
@@ -46,11 +50,14 @@
         border-radius: 100px;
         content: '';
         display: inline-block;
-        height: 60%;
-        width: 60%;
+        height: 12px;
+        width: 12px;
         opacity: 0;
     }
     &__input:checked ~ &__btn::after {
         opacity: 1;
+    }
+    &__input:focus ~ &__btn {
+        box-shadow: 0 0 2px 2px #67A1F9;
     }
 }
