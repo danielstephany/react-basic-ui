@@ -10,6 +10,7 @@
     &__label {
         box-sizing: border-box;
         display: inline-block;
+        margin-left: 4px;
     }
     &__container {
         box-sizing: border-box;
@@ -19,7 +20,6 @@
         height: 20px;
         width: 20px;
         position: relative;
-        margin-left: 4px;
     }
     &__input {
         margin: 0;
@@ -48,6 +48,7 @@
     &__btn::after {
         background: @primary;
         border-radius: 100px;
+        box-sizing: border-box;
         content: '';
         display: inline-block;
         height: 12px;
@@ -59,5 +60,12 @@
     }
     &__input:focus ~ &__btn {
         box-shadow: 0 0 2px 2px #67A1F9;
+    }
+    &--label-left {
+        .rbui-radio__label {
+            order: -1;
+            margin-left: initial;
+            margin-right: 4px;
+        }
     }
 }

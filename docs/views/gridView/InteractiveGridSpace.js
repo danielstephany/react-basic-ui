@@ -9,13 +9,7 @@ const InteractiveGridSpace = () => {
     const [spacing, setSpacing] = useState(spacing);
 
     function setit(e){
-        e.preventDefault();
-        setSpacing(spacingInput);
-    }
-
-    function logit(e){
-        console.log(e.target.value);
-        console.log('test');
+        setSpacing(e.target.value);
     }
 
     return (
@@ -37,13 +31,21 @@ const InteractiveGridSpace = () => {
                     <Grid row>
                         <Grid col xs="12">
                             <Paper className="textc">
-                                <form onSubmit={setit}>
+                                <Form onSubmit={setit}>
                                     {/* <input type="number" min="0" max="10" value={spacingInput} onChange={(e)=> {setSpacingInput(e.target.value)}}/> */}
-                                    <BaseRadio onChange={logit} label="test1" name="test" />
-                                    <BaseRadio onChange={logit} label="test2" name="test" />
-                                    <BaseRadio onChange={logit} label="test3" name="test" />
-                                    <BaseRadio onChange={logit} label="test4" name="test" />
-                                </form>
+                                    <BaseRadio onChange={setit} value="0" label="0" name="test" />
+                                    <BaseRadio onChange={setit} value="1" label="1" name="test" />
+                                    <BaseRadio onChange={setit} value="2" label="2" name="test" />
+                                    <BaseRadio onChange={setit} value="3" label="3" name="test" />
+                                    <BaseRadio onChange={setit} value="4" label="4" name="test" />
+                                    <BaseRadio onChange={setit} value="5" label="5" name="test" />
+                                    <BaseRadio onChange={setit} value="6" label="6" name="test" />
+                                    <BaseRadio onChange={setit} value="7" label="7" name="test" />
+                                    <BaseRadio onChange={setit} value="8" label="8" name="test" />
+                                    <BaseRadio onChange={setit} value="9" label="9" name="test" />
+                                    <BaseRadio onChange={setit} value="10" label="10" name="test" />
+                                    <BaseRadio onChange={setit} value="" label="Default" name="test" labelLeft/>
+                                </Form>
                             </Paper>
                         </Grid>
                     </Grid>
