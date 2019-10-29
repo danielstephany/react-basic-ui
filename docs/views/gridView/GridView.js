@@ -13,23 +13,31 @@ class GridView extends Component {
 
     render = () => {
         return(
-            <Grid container vMargin="8">
-                <Grid row>
-                    <Grid col sm="12" md="8" offsetMd="2">
-                        <h2>The grid</h2>
-                        <p>Using the grid component will allow you to develop a all kinds of layouts that are responsive.</p>
-                        <h3>break points</h3>
-                        <p>Out of the box the grid uses pre defined break points that you can use to rearange your layout for multible screen sizes.</p>
-                        <BreakpointsTable/>
-                        <Highlight className="testClass" >
-                        {gridtxt}
-                        </Highlight>
-                        <SimpleGrid/>
-                        <BreakpointsGrid/>
-                        <InteractiveGridSpace/>
+            <React.Fragment>
+                <Grid container vMargin="8">
+                    <Grid row>
+                        <Grid col sm="12" md="8" offsetMd="2">
+                            <h2>The grid</h2>
+                            <p>Using the grid component will allow you to develop a all kinds of layouts that are responsive.</p>
+                            <h3>break points</h3>
+                            <p>Out of the box the grid uses pre defined break points that you can use to rearange your layout for multible screen sizes.</p>
+                            <BreakpointsTable/>
+                        </Grid>
                     </Grid>
                 </Grid>
-            </Grid>
+                <Grid container vMargin="10">
+                    <Grid row>
+                        <Grid col sm="12" md="8" offsetMd="2">
+                            <Highlight className="testClass" >
+                            {gridtxt}
+                            </Highlight>
+                            <SimpleGrid/>
+                            <BreakpointsGrid/>
+                            <InteractiveGridSpace/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </React.Fragment>
         );
     }
 }
