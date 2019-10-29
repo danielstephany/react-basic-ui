@@ -1,5 +1,5 @@
 import React from 'react';
-import FormItem from '../formItem/formItem.js';
+import FormItem from '../formItem/FormItem.js';
 import PropTypes from 'prop-types';
 import './fieldSet.less';
 
