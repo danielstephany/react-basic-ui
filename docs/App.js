@@ -12,6 +12,7 @@ import GridView from './views/gridView/GridView.js';
 import MainDrawer from './containers/mainDrawer/MainDrawer.js';
 import ListView from './views/listView/ListView.js';
 import TableView from './views/TableView/TableView.js';
+import FormElementsView from './views/FormElementsView/FormElementsView.js';
 
 class App extends Component {
   constructor(props){
@@ -57,7 +58,8 @@ class App extends Component {
             <Route exact path="/grid" component={props => <GridView {...props} />} />
             <Route exact path="/list" component={props => <ListView {...props} />} />
             <Route exact path="/table" component={props => <TableView {...props}/>} />
-    
+            <Route exact path="/form-elements" component={props => <FormElementsView {...props} /> }/>
+
           </MainSection>
         </DrawerContainer>
       </HashRouter>

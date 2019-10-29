@@ -27,6 +27,9 @@ const MainDrawer = (props) => {
                 <ListItem hasAction >
                     <ListItemAction component={NavLink} to="/table" onClick={props.drawerToggle}>Table</ListItemAction>
                 </ListItem>
+                <ListItem hasAction >
+                    <ListItemAction component={NavLink} to="/form-elements" onClick={props.drawerToggle}>Form Elements</ListItemAction>
+                </ListItem>
                 <ListItem>link 1</ListItem>
                 <ListItem>link 2<ListItemSecondary> <Menu /> </ListItemSecondary></ListItem>
                 <ListItem>link 3</ListItem>
