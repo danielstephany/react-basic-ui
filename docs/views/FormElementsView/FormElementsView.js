@@ -21,7 +21,7 @@ class GridView extends Component {
                           
                             <Grid container stretch vMargin="8">
                                 <Grid row>
-                                    <Grid col sm="12" md="8">
+                                    <Grid col sm="12">
                                         <Paper>
                                             <h3>example form</h3>
                                             <Form>
@@ -35,7 +35,6 @@ class GridView extends Component {
                                                     <BaseRadio value="0" label="0" name="test" />
                                                     <BaseRadio value="1" label="1" name="test" />
                                                     <BaseRadio value="2" label="2" name="test" />
-                                                 
                                                 </FieldSet> 
                                                 <TextBox label="Gender" />
                                             </Form>
