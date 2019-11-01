@@ -1,6 +1,7 @@
-import React, {Container} from 'react';
+import React, { Component} from 'react';
+import './collapseBox.less';
 
-class CollapseBox extends Container {
+class CollapseBox extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -10,8 +11,10 @@ class CollapseBox extends Container {
     }
 
     componentDidMount = () => {
-        if (!this.props.open) {
-            this.setOpenHeight()
+        if (this.props.open) {
+            this.setOpenHeight();
+        } else {
+            this.setClosedHeight();
         }
     }
 
@@ -19,7 +22,7 @@ class CollapseBox extends Container {
         if(this.props.open && !this.isOpen){
             this.setOpenHeight();
         } else if (!this.props.open && this.isOpen) {
-
+            this.setClosedHeight();
         }
     }
 
@@ -32,7 +35,7 @@ class CollapseBox extends Container {
 
     setClosedHeight = () => {
         this.setState({ height: "0px" }, () => {
-            this.isOpen = true;
+            this.isOpen = false;
         });
     }
 
@@ -41,14 +44,15 @@ class CollapseBox extends Container {
         const classes = className ? 'rbui-collapse-box ' + className : 'rbui-collapse-box';
         const styles = {
             height: this.state.height
-        }
-
+        };
         return (
-            <div className={classes} styles={styles} ref={(div) => { this.box = div }} {...others}>
+            <div className={classes} style={styles} ref={(div) => { this.box = div }} {...others}>
                 <div ref={(div) => {this.innerBox = div}}>
-                    {className}
+                    {children}
                 </div>
             </div>
         );
     }
 }
+
+export default CollapseBox;

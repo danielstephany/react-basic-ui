@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Grid from 'components/grid/Grid.js';
 import Paper from  'components/paper/Paper.js';
+import CollapseBox from 'components/collapseBox/CollapseBox.js';
 
 const SimpleGrid = function(props){
+    const [boxOpen, setBoxOpen] = useState(false);
+
     return (
         <React.Fragment>
-            <h3>Simple grid</h3>
-
+            <h3 onClick={() => {setBoxOpen(!boxOpen)}}>Simple grid</h3>
+            <CollapseBox open={boxOpen}>
+                test
+            </CollapseBox>
             <div className="fill-container">
                 <Grid container className="grid-example">
                     <Grid row>
