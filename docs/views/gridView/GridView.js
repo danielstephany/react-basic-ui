@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import './gridView.less';
 import Grid from 'components/grid/Grid.js';
-import Highlight from 'react-highlight'
-import gridtxt from './grid.txt';
 
 import BreakpointsTable from './BreakpointsTable.js';
 import BreakpointsGrid from './BreakpointsGrid.js';
@@ -28,9 +26,6 @@ class GridView extends Component {
                 <Grid container vMargin="10">
                     <Grid row>
                         <Grid col sm="12" md="8" offsetMd="2">
-                            <Highlight className="testClass" >
-                            {gridtxt}
-                            </Highlight>
                             <SimpleGrid/>
                             <BreakpointsGrid/>
                             <InteractiveGridSpace/>
