@@ -4,12 +4,13 @@ import Paper from  'components/paper/Paper.js';
 import CollapseBox from 'components/collapseBox/CollapseBox.js';
 import Highlight from 'react-highlight'
 import breakpointsGridTxt from './breakpointsGrid.txt';
+import TitleToggle from '../../../../components/titleToggle/TitleToggle';
 
 const BreakpointsGrid = function(props){
     const [boxOpen, setBoxOpen] = useState(false);
     return (
         <React.Fragment>
-            <h3 onClick={()=>{setBoxOpen(!boxOpen)}}>Grid with breakpoints</h3>
+            <TitleToggle toggleEvent={() => { setBoxOpen(!boxOpen) }} >Grid with breakpoints</TitleToggle>
             <CollapseBox open={boxOpen}>
                 <div className="code-container">
                     <Highlight>{breakpointsGridTxt}</Highlight>

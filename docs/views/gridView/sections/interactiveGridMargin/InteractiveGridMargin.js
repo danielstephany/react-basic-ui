@@ -7,6 +7,7 @@ import BaseRadio from 'components/baseRadio/BaseRadio.js';
 import CollapseBox from 'components/collapseBox/CollapseBox.js';
 import Highlight from 'react-highlight'
 import interactiveGridMarginTxt from './interactiveGridMargin.txt';
+import TitleToggle from '../../../../components/titleToggle/TitleToggle';
 
 const InteractiveGridMargin = (props) => {
     const [vMargin, setVMargin] = useState('');
@@ -19,7 +20,7 @@ const InteractiveGridMargin = (props) => {
     return (
         <React.Fragment>
             <h3>Adjustable Vertical Margin of grid containers</h3>
-            <h3 onClick={() => { setOpenBox(!openBox) }} >Adjustable Vertical Margin example</h3>
+            <TitleToggle toggleEvent={() => { setBoxOpen(!boxOpen) }} >Adjustable Vertical Margin example</TitleToggle>
             <CollapseBox open={openBox}>
                 <div className="code-container">
                     <Highlight>{interactiveGridMarginTxt}</Highlight>
@@ -49,7 +50,7 @@ const InteractiveGridMargin = (props) => {
                         <Grid col xs="12">
                             <Paper className="textc">
                                 <Form onSubmit={setSpacingValue}>
-                                    <FieldSet legend="Modify column padding" fullWidth>
+                                    <FieldSet legend="Modify container margin" fullWidth>
                                         <BaseRadio onChange={setSpacingValue} value="0" label="0" name="test" />
                                         <BaseRadio onChange={setSpacingValue} value="1" label="1" name="test" />
                                         <BaseRadio onChange={setSpacingValue} value="2" label="2" name="test" />

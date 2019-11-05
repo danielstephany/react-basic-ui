@@ -7,6 +7,7 @@ import BaseRadio from 'components/baseRadio/BaseRadio.js';
 import CollapseBox from 'components/collapseBox/CollapseBox.js';
 import Highlight from 'react-highlight'
 import interactiveGridSpaceTxt from './interactiveGridSpace.txt';
+import TitleToggle from '../../../../components/titleToggle/TitleToggle';
 
 const InteractiveGridSpace = (props) => {
     const [spacing, setSpacing] = useState('');
@@ -20,7 +21,7 @@ const InteractiveGridSpace = (props) => {
         <React.Fragment>
             <h3>Adjustable gutters</h3>
             <p>The padding of the collumns can be increased or decrease by passing a value to the <strong>spacing</strong> prop.</p>
-            <h3 onClick={()=>{setOpenBox(!openBox)}} >Adjustable gutters example</h3>
+            <TitleToggle toggleEvent={() => { setBoxOpen(!boxOpen) }} >Adjustable gutters example</TitleToggle>
             <CollapseBox open={openBox}>
                 <div className="code-container">
                     <Highlight>{interactiveGridSpaceTxt}</Highlight>

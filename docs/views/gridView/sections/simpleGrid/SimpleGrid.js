@@ -4,13 +4,14 @@ import Paper from  'components/paper/Paper.js';
 import CollapseBox from 'components/collapseBox/CollapseBox.js';
 import Highlight from 'react-highlight'
 import gridtxt from './grid.txt';
+import TitleToggle from '../../../../components/titleToggle/TitleToggle';
 
 const SimpleGrid = function(props){
     const [boxOpen, setBoxOpen] = useState(false);
 
     return (
         <React.Fragment>
-            <h3 onClick={() => {setBoxOpen(!boxOpen)}}>Simple grid example</h3>
+            <TitleToggle toggleEvent={() => { setBoxOpen(!boxOpen) }} >Simple grid example</TitleToggle>
             <CollapseBox open={boxOpen}>
                 <div className="code-container">
                     <Highlight >
