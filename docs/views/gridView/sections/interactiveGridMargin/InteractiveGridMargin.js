@@ -4,26 +4,43 @@ import Paper from  'components/paper/Paper.js';
 import Form from 'components/form/Form.js';
 import FieldSet from 'components/fieldSet/FieldSet.js';
 import BaseRadio from 'components/baseRadio/BaseRadio.js';
+import CollapseBox from 'components/collapseBox/CollapseBox.js';
+import Highlight from 'react-highlight'
+import interactiveGridMarginTxt from './interactiveGridMargin.txt';
 
-const InteractiveGridSpace = (props) => {
-    const [spacing, setSpacing] = useState('');
+const InteractiveGridMargin = (props) => {
+    const [vMargin, setVMargin] = useState('');
+    const [openBox, setOpenBox] = useState(false);
 
     function setSpacingValue(e){
-        setSpacing(e.target.value);
+        setVMargin(e.target.value);
     }
 
     return (
         <React.Fragment>
-            <h3>Adjustable gutters</h3>
-            <p>The padding of the collumns can be increased or decrease by passing a value to the <strong>spacing</strong> prop.</p>
+            <h3>Adjustable Vertical Margin of grid containers</h3>
+            <h3 onClick={() => { setOpenBox(!openBox) }} >Adjustable Vertical Margin example</h3>
+            <CollapseBox open={openBox}>
+                <div className="code-container">
+                    <Highlight>{interactiveGridMarginTxt}</Highlight>
+                </div>
+            </CollapseBox>
             <div className="fill-container">
-                <Grid container className="grid-example">
-                    <Grid row spacing={spacing}>
+                <Grid container vMargin={vMargin} className="grid-example">
+                    <Grid row>
                         <Grid col xs="4"><Paper className="textc">xs=4</Paper></Grid>
                         <Grid col xs="4"><Paper className="textc">xs=4</Paper></Grid>
                         <Grid col xs="4"><Paper className="textc">xs=4</Paper></Grid>
-                        <Grid col xs="3"><Paper className="textc">xs=3</Paper></Grid>
-                        <Grid col xs="9"><Paper className="textc">xs=9</Paper></Grid>
+                    </Grid>
+                </Grid>
+                <Grid container vMargin={vMargin} className="grid-example">
+                    <Grid row>
+                        <Grid col xs="6"><Paper className="textc">xs=6</Paper></Grid>
+                        <Grid col xs="6"><Paper className="textc">xs=6</Paper></Grid>
+                    </Grid>
+                </Grid>
+                <Grid container vMargin={vMargin} className="grid-example">
+                    <Grid row>
                         <Grid col xs="12"><Paper className="textc">xs=12</Paper></Grid>
                     </Grid>
                 </Grid>
@@ -56,4 +73,4 @@ const InteractiveGridSpace = (props) => {
     );
 }
 
-export default InteractiveGridSpace;
+export default InteractiveGridMargin;

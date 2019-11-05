@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 import './gridView.less';
 import Grid from 'components/grid/Grid.js';
 
-import BreakpointsTable from './BreakpointsTable.js';
-import BreakpointsGrid from './BreakpointsGrid.js';
-import SimpleGrid from './SimpleGrid.js';
-import InteractiveGridSpace from './InteractiveGridSpace.js';
+import BreakpointsTable from './sections/BreakpointsTable.js';
+import BreakpointsGrid from './sections/breakpointsGrid/BreakpointsGrid.js';
+import SimpleGrid from './sections/simpleGrid/SimpleGrid.js';
+import InteractiveGridSpace from './sections/interactiveGridSpace/InteractiveGridSpace.js';
+import InteractiveGridMargin from './sections/interactiveGridMargin/InteractiveGridMargin.js';
 
 class GridView extends Component {
 
@@ -29,6 +30,7 @@ class GridView extends Component {
                             <SimpleGrid/>
                             <BreakpointsGrid/>
                             <InteractiveGridSpace/>
+                            <InteractiveGridMargin/>
                         </Grid>
                     </Grid>
                 </Grid>

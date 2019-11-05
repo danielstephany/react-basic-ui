@@ -13,7 +13,7 @@ const SimpleGrid = function(props){
             <h3 onClick={() => {setBoxOpen(!boxOpen)}}>Simple grid example</h3>
             <CollapseBox open={boxOpen}>
                 <div className="code-container">
-                    <Highlight className="testClass" >
+                    <Highlight >
                         {gridtxt}
                     </Highlight>
                 </div>
