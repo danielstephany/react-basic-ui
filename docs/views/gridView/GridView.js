@@ -14,14 +14,18 @@ class GridView extends Component {
     render = () => {
         return(
             <React.Fragment>
-                <Grid container vMargin="8">
+                <Grid container vMargin="10">
                     <Grid row>
                         <Grid col sm="12" md="8" offsetMd="2">
                             <h2>The grid</h2>
-                            <p>Using the grid component will allow you to develop a all kinds of layouts that are responsive.</p>
-                            <h3>break points</h3>
-                            <p>Out of the box the grid uses pre defined break points that you can use to rearange your layout for multible screen sizes.</p>
-                            <BreakpointsTable/>
+                            <p>React Basic UI comes with a responsive grid system that uses a 12 column layout. The Grid also has responive breakpoints alowing for customizable layouts that will work on any screen.</p>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid container vMargin="10">
+                    <Grid row>
+                        <Grid col sm="12" md="8" offsetMd="2">
+                            <BreakpointsTable />
                         </Grid>
                     </Grid>
                 </Grid>

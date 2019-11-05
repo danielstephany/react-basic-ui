@@ -10,7 +10,8 @@ const BreakpointsGrid = function(props){
     const [boxOpen, setBoxOpen] = useState(false);
     return (
         <React.Fragment>
-            <TitleToggle toggleEvent={() => { setBoxOpen(!boxOpen) }} >Grid with breakpoints</TitleToggle>
+            <h3>Grid with breakpoints</h3>
+            <TitleToggle toggleEvent={() => { setBoxOpen(!boxOpen) }} >Grid with breakpoints example</TitleToggle>
             <CollapseBox open={boxOpen}>
                 <div className="code-container">
                     <Highlight>{breakpointsGridTxt}</Highlight>

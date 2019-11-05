@@ -20,7 +20,7 @@ const InteractiveGridMargin = (props) => {
     return (
         <React.Fragment>
             <h3>Adjustable Vertical Margin of grid containers</h3>
-            <TitleToggle toggleEvent={() => { setBoxOpen(!boxOpen) }} >Adjustable Vertical Margin example</TitleToggle>
+            <TitleToggle toggleEvent={() => { setOpenBox(!openBox) }} >Adjustable Vertical Margin example</TitleToggle>
             <CollapseBox open={openBox}>
                 <div className="code-container">
                     <Highlight>{interactiveGridMarginTxt}</Highlight>

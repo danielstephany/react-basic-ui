@@ -19,9 +19,9 @@ const InteractiveGridSpace = (props) => {
 
     return (
         <React.Fragment>
-            <h3>Adjustable gutters</h3>
+            <h3>Adjustable Column padding</h3>
             <p>The padding of the collumns can be increased or decrease by passing a value to the <strong>spacing</strong> prop.</p>
-            <TitleToggle toggleEvent={() => { setBoxOpen(!boxOpen) }} >Adjustable gutters example</TitleToggle>
+            <TitleToggle toggleEvent={() => { setOpenBox(!openBox) }} >djustable Column padding example</TitleToggle>
             <CollapseBox open={openBox}>
                 <div className="code-container">
                     <Highlight>{interactiveGridSpaceTxt}</Highlight>

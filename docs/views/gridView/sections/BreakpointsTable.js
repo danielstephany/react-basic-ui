@@ -10,6 +10,8 @@ import TableContainer from 'components/tableContainer/TableContainer.js';
 const BreakpointsTable = function(props){
     return (
         <React.Fragment>
+            <h3>Responsive Break points</h3>
+            <p>Out of the box the grid uses pre defined break points that you can use to rearange your layout for multible screen sizes.</p>
             <TableContainer>
                 <Table>
                     <TableHead>
