@@ -20,6 +20,7 @@ const InteractiveGridMargin = (props) => {
     return (
         <React.Fragment>
             <h3>Adjustable Vertical Margin of grid containers</h3>
+            <p>Add extra margin to the top and bottom of the grid containers by passing the <strong>vMargin</strong> prop with the desired value.</p>
             <TitleToggle toggleEvent={() => { setOpenBox(!openBox) }} >Adjustable Vertical Margin example</TitleToggle>
             <CollapseBox open={openBox}>
                 <div className="code-container">

@@ -20,7 +20,7 @@ const InteractiveGridSpace = (props) => {
     return (
         <React.Fragment>
             <h3>Adjustable Column padding</h3>
-            <p>The padding of the collumns can be increased or decrease by passing a value to the <strong>spacing</strong> prop.</p>
+            <p>The padding of the columns can be increased or decreased by passing a value to the <strong>spacing</strong> prop.</p>
             <TitleToggle toggleEvent={() => { setOpenBox(!openBox) }} >djustable Column padding example</TitleToggle>
             <CollapseBox open={openBox}>
                 <div className="code-container">

@@ -11,6 +11,7 @@ const BreakpointsGrid = function(props){
     return (
         <React.Fragment>
             <h3>Grid with breakpoints</h3>
+            <p>Easily create a layout that will rearrange to fit any display by using the built in responsive breakpoints.</p>
             <TitleToggle toggleEvent={() => { setBoxOpen(!boxOpen) }} >Grid with breakpoints example</TitleToggle>
             <CollapseBox open={boxOpen}>
                 <div className="code-container">
