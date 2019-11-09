@@ -5,7 +5,7 @@ import BaseLabel from '../baseLabel/BaseLabel.js';
 import BaseInput from '../baseInput/BaseInput.js';
 
 const TextBox = React.forwardRef(function textBox(props, ref) {
-    const { className, errMessage, fullWidth, ...others} = props;
+    const { className, errMessage, fullWidth, label, id, ...others} = props;
     let classes = className ? className : '';
 
     if(errMessage){
@@ -14,7 +14,7 @@ const TextBox = React.forwardRef(function textBox(props, ref) {
   
     return (
         <FormItem fullWidth={!!fullWidth} className={classes}>
-            <BaseLabel htmlFor={props.id ? props.id : ''}>{props.label}</BaseLabel>
+            <BaseLabel {...id ? {htmlFor: id} : null}>{label}</BaseLabel>
             <BaseInput ref={ref} {...others} />
             {errMessage ? <span className="inline-error">{errMessage}</span> : null}
         </FormItem>

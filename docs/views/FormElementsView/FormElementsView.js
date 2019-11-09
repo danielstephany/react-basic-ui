@@ -25,16 +25,17 @@ class GridView extends Component {
                                         <Paper>
                                             <h3>example form</h3>
                                             <Form>
-                                                <TextBox label="First Name"/>
+                                                <TextBox label="First Name" id="firstName"/>
                                                 <TextBox label="Last Name" />
                                                 <TextBox type="email" label="Email" />
                                                 <TextBox type="date" label="Birthday" />
-                                                <TextBox type="number" min="0" label="age"/>
+                                                <TextBox type="number" min="0" label="Age"/>
                                                 <TextBox label="Gender"/>
-                                                <FieldSet legend="Modify column padding" fullWidth>
-                                                    <BaseRadio value="0" label="0" name="test" />
-                                                    <BaseRadio value="1" label="1" name="test" />
-                                                    <BaseRadio value="2" label="2" name="test" />
+                                                <FieldSet legend="Favorite Ninja Turtle" fullWidth>
+                                                    <BaseRadio value="0" label="Leonardo" name="test" />
+                                                    <BaseRadio value="1" label="Michelangelo" name="test" />
+                                                    <BaseRadio value="2" label="Donatello" name="test" />
+                                                    <BaseRadio value="2" label="Raphael" name="test" />
                                                 </FieldSet> 
                                                 <TextBox label="Gender" />
                                             </Form>
