@@ -73,13 +73,7 @@ class GridView extends Component {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid container vMargin="10">
-                    <Grid row>
-                        <Grid col sm="12" md="8" offsetMd="2">
-                            <GridOptions />
-                        </Grid>
-                    </Grid>
-                </Grid>
+                <GridOptions />
             </React.Fragment>
         );
     }

@@ -10,7 +10,7 @@ const Paper = React.forwardRef((props, ref)=>{
         classes += ' rbui-paper--no-padding'
     }
 
-    return <section className={classes} ref={ref} {...others}>{children}</section>
+    return <div className={classes} ref={ref} {...others}>{children}</div>
 });
 
 Paper.propTypes = {
