@@ -15,7 +15,7 @@ describe("tests for FormItem", function () {
 
     it("renders with default class and added classes ", function () {
         const wrap = shallow(<FormItem className="test" />);
-        expect(wrap.hasClass('form-item test')).toBe(true);
+        expect(wrap.hasClass('rbui-form-item test')).toBe(true);
     });
 
     it("renders with the child data", function () {
