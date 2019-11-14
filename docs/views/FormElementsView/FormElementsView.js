@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Grid from 'components/grid/Grid.js';
-import Highlight from 'react-highlight';
+// import Highlight from 'react-highlight'
 import Paper from 'components/paper/Paper.js';
 import Form from 'components/form/Form.js';
 import TextBox from 'components/textBox/TextBox';
@@ -18,7 +18,9 @@ class GridView extends Component {
                         <h2>Form Elements</h2>
                     
                         <div className="fill-container">
-                          
+                            {/* <Highlight>
+                                {"<h1>text<h1/>"}
+                            </Highlight> */}
                             <Grid container stretch vMargin="8">
                                 <Grid row>
                                     <Grid col sm="12">

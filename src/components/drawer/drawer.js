@@ -37,7 +37,7 @@ class Drawer extends Component {
         if (this.state.open) {
             drawerStyles.transform = "translateX(0)";
         }
-        console.log(drawerStyles);
+        
         return drawerStyles;
     }
 

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import './gridView.less';
 import Grid from 'components/grid/Grid.js';
 
@@ -11,7 +11,7 @@ import InteractiveGridSpace from './sections/interactiveGridSpace/InteractiveGri
 import InteractiveGridMargin from './sections/interactiveGridMargin/InteractiveGridMargin.js';
 import GridOptions from './sections/GridOptions.js';
 
-class GridView extends Component {
+class GridView extends PureComponent {
 
     render = () => {
         return(
