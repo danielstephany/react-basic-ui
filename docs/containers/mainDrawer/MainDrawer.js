@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Drawer from 'components/drawer/drawer.js';
 import List from 'components/list/List.js';
@@ -8,9 +8,11 @@ import ListItemIcon from 'components/listItemIcon/ListItemIcon.js';
 import ListItemAction from 'components/listItemAction/ListItemAction.js';
 import Menu from 'components/icons/menu.js';
 import { NavLink } from 'react-router-dom';
+import CollapseBox from 'components/collapseBox/CollapseBox.js';
 
 
 const MainDrawer = (props) => {
+    const [formElemDrawerOpen, setFormElemDrawer] = useState(false);
 
     return (
         <Drawer transitionTime={250} maxWidth={400} slideFrom="left" preventBodyScroll={false} drawerToggle={props.drawerToggle} isOpen={props.drawerOpen}>
@@ -28,7 +30,26 @@ const MainDrawer = (props) => {
                     <ListItemAction component={NavLink} to="/table" onClick={props.drawerToggle}>Table</ListItemAction>
                 </ListItem>
                 <ListItem hasAction >
-                    <ListItemAction component={NavLink} to="/form-elements" onClick={props.drawerToggle}>Form Elements</ListItemAction>
+                    <ListItemAction button onClick={() => { setFormElemDrawer(!formElemDrawerOpen)}}>Form Elements</ListItemAction>
+                    <CollapseBox open={formElemDrawerOpen}>
+                        <List>
+                            <ListItem hasAction >
+                                <ListItemAction component={NavLink} to="/form-elements" onClick={props.drawerToggle}>Form</ListItemAction>
+                            </ListItem>
+                            <ListItem hasAction >
+                                <ListItemAction component={NavLink} to="/form-item" onClick={props.drawerToggle}>FormItem</ListItemAction>
+                            </ListItem>
+                            <ListItem hasAction >
+                                <ListItemAction component={NavLink} to="/base-input" onClick={props.drawerToggle}>BaseInput</ListItemAction>
+                            </ListItem>
+                            <ListItem hasAction >
+                                <ListItemAction component={NavLink} to="/text-box" onClick={props.drawerToggle}>TextBox</ListItemAction>
+                            </ListItem>
+                            <ListItem hasAction >
+                                <ListItemAction component={NavLink} to="/base-radio" onClick={props.drawerToggle}>BaseRadio</ListItemAction>
+                            </ListItem>
+                        </List>
+                    </CollapseBox>
                 </ListItem>
                 <ListItem>link 1</ListItem>
                 <ListItem>link 2<ListItemSecondary> <Menu /> </ListItemSecondary></ListItem>
