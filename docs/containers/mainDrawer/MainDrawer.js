@@ -63,7 +63,7 @@ const MainDrawer = (props) => {
                                 <ListItemAction component={NavLink} to="/text-box" onClick={props.drawerToggle}>TextBox</ListItemAction>
                             </ListItem>
                             <ListItem hasAction >
-                                <ListItemAction component={NavLink} to="/base-radio" onClick={props.drawerToggle}>BaseRadio</ListItemAction>
+                                <ListItemAction component={NavLink} to="/base-radio" onClick={props.drawerToggle}>RadioButton</ListItemAction>
                             </ListItem>
                         </List>
                     </CollapseBox>

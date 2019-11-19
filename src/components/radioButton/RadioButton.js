@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './baseRadio.less';
+import './radioButton.less';
 
-class BaseRadio extends Component {
+class RadioButton extends Component {
 
     render = () => {
         const { className, forwardedRef, label, labelLeft, ...others } = this.props;
@@ -12,7 +12,7 @@ class BaseRadio extends Component {
         }
 
         return (
-            <label className={classes} {...BaseRadio}>
+            <label className={classes}>
                 <div className="rbui-radio__container">
                     <input className="rbui-radio__input" type="radio" ref={forwardedRef} {...others} />
                     <div role="radio" className="rbui-radio__btn"></div>
@@ -23,4 +23,4 @@ class BaseRadio extends Component {
     }
 }
 
-export default React.forwardRef(function baseRadio(props, ref) { return <BaseRadio {...props} forwardedRef={ref} /> });
+export default React.forwardRef(function radioButton(props, ref) { return <RadioButton {...props} forwardedRef={ref} /> });

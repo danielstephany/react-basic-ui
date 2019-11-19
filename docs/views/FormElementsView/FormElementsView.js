@@ -5,8 +5,8 @@ import Paper from 'components/paper/Paper.js';
 import Form from 'components/form/Form.js';
 import TextBox from 'components/textBox/TextBox';
 import FieldSet from 'components/fieldSet/FieldSet.js';
-import BaseRadio from 'components/baseRadio/BaseRadio.js';
-
+import RadioButton from 'components/radioButton/RadioButton.js';
+import Checkbox from 'components/checkbox/Checkbox.js';
 
 class GridView extends Component {
 
@@ -34,11 +34,16 @@ class GridView extends Component {
                                                 <TextBox type="number" min="0" label="Age"/>
                                                 <TextBox label="Gender"/>
                                                 <FieldSet legend="Favorite Ninja Turtle" fullWidth>
-                                                    <BaseRadio value="0" label="Leonardo" name="test" />
-                                                    <BaseRadio value="1" label="Michelangelo" name="test" />
-                                                    <BaseRadio value="2" label="Donatello" name="test" />
-                                                    <BaseRadio value="2" label="Raphael" name="test" />
-                                                </FieldSet> 
+                                                    <RadioButton value="0" labelLeft label="Leonardo" name="test" />
+                                                    <RadioButton value="1" label="Michelangelo" name="test" />
+                                                    <RadioButton value="2" label="Donatello" name="test" />
+                                                    <RadioButton value="2" label="Raphael" name="test" />
+                                                </FieldSet>
+                                                <FieldSet legend="check favorite flavors" fullWidth>
+                                                    <Checkbox value="0" labelLeft label="chocolate" name="test" />
+                                                    <Checkbox value="1" label="vanila" name="test" />
+                                                    <Checkbox value="2" label="almond" name="test" />
+                                                </FieldSet>  
                                                 <TextBox label="Gender" />
                                             </Form>
                                         </Paper>

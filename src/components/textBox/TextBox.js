@@ -7,7 +7,7 @@ import BaseInput from '../baseInput/BaseInput.js';
 const TextBox = React.forwardRef(function textBox(props, ref) {
     const { className, errMessage, fullWidth, label, ...others} = props;
     const id = others.id;
-    let classes = className ? className : '';
+    let classes = className ? 'rbui-textbox ' + className : 'rbui-textbox';
 
     if(errMessage){
         classes += ' has-error';
