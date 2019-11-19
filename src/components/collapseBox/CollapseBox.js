@@ -27,7 +27,8 @@ class CollapseBox extends Component {
     }
 
     setOpenHeight = () => {
-        const height = this.innerBox.clientHeight + "px";
+        const height = this.props.transitionDuration ? this.innerBox.clientHeight + "px": "auto";
+
         this.setState({height: height}, () => {
             this.isOpen = true;
         });
@@ -40,15 +41,17 @@ class CollapseBox extends Component {
     }
 
     render = () => {
-        const {className, open, children, ...others} = this.props
+        const { className, open, children, transitionDuration, ...others} = this.props
         const classes = className ? 'rbui-collapse-box ' + className : 'rbui-collapse-box';
         const styles = {
+            transitionDuration: this.props.transitionDuration ? this.props.transitionDuration : "0.25s",
             height: this.state.height
         };
+
         return (
             <div className={classes} style={styles} ref={(div) => { this.box = div }} {...others}>
                 <div ref={(div) => {this.innerBox = div}}>
-                    {children}
+                    {(this.props.open || this.props.transitionDuration) ? children : null}
                 </div>
             </div>
         );

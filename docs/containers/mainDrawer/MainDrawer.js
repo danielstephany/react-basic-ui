@@ -13,6 +13,16 @@ import CollapseBox from 'components/collapseBox/CollapseBox.js';
 
 const MainDrawer = (props) => {
     const [formElemDrawerOpen, setFormElemDrawer] = useState(false);
+    const [layoutDrawerOpen, setLayoutDrawer] = useState(false);
+    console.log(props);
+
+    const closeAndGoTo = (location) =>  (e) => {
+            console.log(e);
+            props.drawerToggle()
+            .then(() => {
+                props.history.push(location);
+            });
+        };
 
     return (
         <Drawer transitionTime={250} maxWidth={400} slideFrom="left" preventBodyScroll={false} drawerToggle={props.drawerToggle} isOpen={props.drawerOpen}>
@@ -21,7 +31,14 @@ const MainDrawer = (props) => {
                     <ListItemAction component={NavLink} to="/" onClick={props.drawerToggle}>Home</ListItemAction>
                 </ListItem>
                 <ListItem hasAction >
-                    <ListItemAction component={NavLink} to="/grid" onClick={props.drawerToggle}>Grid</ListItemAction>
+                    <ListItemAction onClick={() => {setLayoutDrawer(!layoutDrawerOpen)}}>Layout</ListItemAction>
+                    <CollapseBox open={layoutDrawerOpen} transitionDuration="0.2s">
+                        <List>
+                            <ListItem hasAction >
+                                <ListItemAction component={NavLink} to="/grid" onClick={props.drawerToggle}>Grid</ListItemAction>      
+                            </ListItem>
+                        </List>
+                    </CollapseBox>
                 </ListItem>
                 <ListItem hasAction >
                     <ListItemAction component={NavLink} to="/list" onClick={props.drawerToggle}>List</ListItemAction>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { createBrowserHistory } from "history";
 import './App.less';
 import { HashRouter, Route } from 'react-router-dom';
 import MainSection from 'components/mainSection/mainSection.js';
@@ -19,6 +20,8 @@ class App extends Component {
       cardList: [],
       pendingCard: undefined
     }
+
+    this.history = createBrowserHistory();
   }
 
   updatePendingCard = (pendingCardData) => {
@@ -33,12 +36,17 @@ class App extends Component {
   }
 
   drawerToggle = () => {
-    this.setState({drawerOpen: !this.state.drawerOpen})
+    return new Promise(resolve => {
+      this.setState({ drawerOpen: !this.state.drawerOpen }, ()=>{
+        console.log('drawer close');
+        resolve();
+      })
+    });
   }
 
   render() {
     return (
-      <HashRouter>
+      <HashRouter history={this.history}>
         <DrawerContainer>
           <AppHeader>
             <Grid container noGutters >
@@ -48,7 +56,7 @@ class App extends Component {
               </Grid>
             </Grid>
           </AppHeader>
-          <MainDrawer drawerToggle={this.drawerToggle} drawerOpen={this.state.drawerOpen} />
+          <MainDrawer drawerToggle={this.drawerToggle} drawerOpen={this.state.drawerOpen} history={this.history}/>
           <MainSection className="form-section">
             <AppRoutes/>
           </MainSection>
