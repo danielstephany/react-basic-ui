@@ -14,6 +14,7 @@ class GridView extends Component {
     log = (e) => {
         console.log(e.target.value);
     }
+
     render = () => {
         return (
             <Grid container vMargin="8">
@@ -49,7 +50,7 @@ class GridView extends Component {
                                                     <Checkbox value="2" label="almond" name="test" />
                                                 </FieldSet>  
                                                 <TextBox label="Gender" />
-                                                <Textarea />
+                                                <Textarea onChange={this.log}/>
                                             </Form>
                                         </Paper>
                                     </Grid>
