@@ -35,7 +35,7 @@ describe("tests for Textbox", function () {
         expect(wrap.dive().hasClass('rbui-form-item--full-width')).toBe(true);
     });
 
-    it('render with the has-error class', function(){
+    it('renders with the has-error class', function(){
         const wrap = shallow(<Textbox errMessage="this is a error"/>);
         expect(wrap.hasClass('has-error')).toBe(true);
     });

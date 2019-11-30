@@ -7,9 +7,13 @@ import TextBox from 'components/textBox/TextBox';
 import FieldSet from 'components/fieldSet/FieldSet.js';
 import RadioButton from 'components/radioButton/RadioButton.js';
 import Checkbox from 'components/checkbox/Checkbox.js';
+import Textarea from 'components/textarea/Textarea';
 
 class GridView extends Component {
 
+    log = (e) => {
+        console.log(e.target.value);
+    }
     render = () => {
         return (
             <Grid container vMargin="8">
@@ -45,6 +49,7 @@ class GridView extends Component {
                                                     <Checkbox value="2" label="almond" name="test" />
                                                 </FieldSet>  
                                                 <TextBox label="Gender" />
+                                                <Textarea />
                                             </Form>
                                         </Paper>
                                     </Grid>
