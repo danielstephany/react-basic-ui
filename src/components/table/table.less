@@ -22,7 +22,7 @@
     }
     &__head-cell {
         box-sizing: border-box;
-        border-bottom: 1px solid @border;
+        border-bottom: 1px solid @borderGrey;
         padding: 4px 8px;
         text-align: left;
     }
@@ -34,7 +34,7 @@
     &__head-cell,
     &__cell {
         border-right: 1px solid #eee;
-        border-bottom: 1px solid @border;
+        border-bottom: 1px solid @borderGrey;
          &:last-child {
             border-right: none;
         }
@@ -51,7 +51,7 @@
     &--sticky-header {
         .rbui-table__head-cell:first-child,
         .rbui-table__head-cell {
-             border-bottom: 1px solid @border;
+             border-bottom: 1px solid @borderGrey;
             position: sticky;
             top: 0px;
             z-index: 100;
