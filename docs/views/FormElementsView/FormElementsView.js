@@ -7,7 +7,7 @@ import TextBox from 'components/textBox/TextBox';
 import FieldSet from 'components/fieldSet/FieldSet.js';
 import RadioButton from 'components/radioButton/RadioButton.js';
 import Checkbox from 'components/checkbox/Checkbox.js';
-import BaseTextarea from 'components/baseTextarea/BaseTextarea.js';
+import Textarea from 'components/textarea/Textarea.js';
 
 class GridView extends Component {
 
@@ -50,7 +50,7 @@ class GridView extends Component {
                                                     <Checkbox value="2" label="almond" name="test" />
                                                 </FieldSet>  
                                                 <TextBox label="Gender" />
-                                                <BaseTextarea onChange={this.log}/>
+                                                <Textarea label="Additional comments" onChange={this.log}/>
                                             </Form>
                                         </Paper>
                                     </Grid>
