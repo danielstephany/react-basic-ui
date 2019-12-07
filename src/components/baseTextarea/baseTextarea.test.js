@@ -8,7 +8,7 @@ describe('BaseTextarea test suit', () => {
     });
 
     it('renders without with extra classes', () => {
-        const wrap = shallow(<BaseTextarea className="my class"></BaseTextarea>);
-        expect(wrap.hasClass("my class")).toBe(true);
+        const wrap = shallow(<BaseTextarea className="my-class"></BaseTextarea>);
+        expect(wrap.hasClass("my-class")).toBe(true);
     });
 });
