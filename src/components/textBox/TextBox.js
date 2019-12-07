@@ -3,11 +3,12 @@ import './textBox.less';
 import FormItem from  '../formItem/FormItem.js';
 import BaseLabel from '../baseLabel/BaseLabel.js';
 import BaseInput from '../baseInput/BaseInput.js';
+import setClasses from '../_utils/setClasses/setClasses.js';
 
 const TextBox = React.forwardRef(function textBox(props, ref) {
     const { className, errMessage, fullWidth, label, ...others} = props;
     const id = others.id;
-    let classes = className ? 'rbui-textbox ' + className : 'rbui-textbox';
+    let classes = setClasses('rbui-textbox', className);
 
     if(errMessage){
         classes += ' has-error';

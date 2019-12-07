@@ -14,11 +14,6 @@ describe("tests for Textbox", function () {
         expect(wrap.dive().hasClass('test')).toBe(true);
     });
 
-    it("renders with added classes and default class", function () {
-        const wrap = shallow(<Textbox className="test" />);
-        expect(wrap.dive().hasClass('rbui-form-item test')).toBe(true);
-    });
-
     it("renders with the proper input attributes", function () {
         const wrap = shallow(<Textbox 
             className="test"
