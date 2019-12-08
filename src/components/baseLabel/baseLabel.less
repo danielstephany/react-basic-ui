@@ -1,8 +1,11 @@
+@import '../_themeStyles/form-styles.less';
+
 .rbui-base {
     box-sizing: border-box;
     display: block;
     font-weight: 500;
-    font-size: inherit;
+    font-size: @formLabelSize;
+    color: @formLabelColor;
     &--inline {
         display: inline-block;
     }

@@ -8,6 +8,7 @@ import FieldSet from 'components/fieldSet/FieldSet.js';
 import RadioButton from 'components/radioButton/RadioButton.js';
 import Checkbox from 'components/checkbox/Checkbox.js';
 import Textarea from 'components/textarea/Textarea.js';
+import BaseSelect from 'components/baseSelect/BaseSelect.js';
 
 class GridView extends Component {
 
@@ -51,6 +52,7 @@ class GridView extends Component {
                                                 </FieldSet>  
                                                 <TextBox label="Gender" />
                                                 <Textarea label="Additional comments" onChange={this.log}/>
+                                                <BaseSelect></BaseSelect>
                                             </Form>
                                         </Paper>
                                     </Grid>
