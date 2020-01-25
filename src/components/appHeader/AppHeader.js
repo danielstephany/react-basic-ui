@@ -34,7 +34,7 @@ class AppHeader extends Component {
     }
 
     render () {
-        const { className, fixed, fixedSpacer, forwardedRef, children, align, ...others } = this.props;
+        const { className, fixed, fixedSpacer, forwardedRef, children, ...others } = this.props;
         const spacer = fixedSpacer ? <div ref={(spacer) => { this.spacer = spacer }} className="rbui-app-header__spacer"></div> : null;
         const fixedOptions = ['top', 'bottom']
         let ref;
@@ -59,8 +59,12 @@ class AppHeader extends Component {
 }
 
 AppHeader.propTypes = {
-    fixed: PropTypes.string,
-    alignItems: PropTypes.string,
-}
+  fixedSpacer: PropTypes.bool,
+  fixed: PropTypes.oneOf(["top", "bottom"])
+};
+
+AppHeader.defaultProps = {
+    fixedSpacer: false
+};
 
 export default React.forwardRef(function appHeader (props, ref) { return <AppHeader {...props} forwardedRef={ref}/> });

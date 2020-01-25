@@ -52,7 +52,11 @@ class GridView extends Component {
                                                 </FieldSet>  
                                                 <TextBox label="Gender" />
                                                 <Textarea label="Additional comments" onChange={this.log}/>
-                                                <BaseSelect></BaseSelect>
+                                                <BaseSelect value="2">
+                                                    <option value="1">test</option>
+                                                    <option value="2">test1</option>
+                                                    <option value="3">test3</option>
+                                                </BaseSelect>
                                             </Form>
                                         </Paper>
                                     </Grid>

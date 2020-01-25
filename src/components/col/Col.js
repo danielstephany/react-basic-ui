@@ -41,18 +41,26 @@ const Col = React.forwardRef(function col(props, ref) {
 });
 
 Col.propTypes = {
-    className: PropTypes.string,
-    children: PropTypes.any, 
-    xs: PropTypes.string, 
-    sm: PropTypes.string, 
-    md: PropTypes.string, 
-    lg: PropTypes.string, 
-    xl: PropTypes.string, 
-    offsetXs: PropTypes.string, 
-    offsetSm: PropTypes.string, 
-    offsetMd: PropTypes.string, 
-    offsetLg: PropTypes.string, 
-    offsetXl: PropTypes.string, 
-}
+  /** sets the width of the column at screen widths of 0px and higher */
+  xs: PropTypes.string,
+  /** sets the width of the column at screen widths of 576px and higher */
+  sm: PropTypes.string,
+  /** sets the width of the column at screen widths of 768px and higher */
+  md: PropTypes.string,
+  /** sets the width of the column at screen widths of 998px and higher */
+  lg: PropTypes.string,
+  /** sets the width of the column at screen widths of 1200px and higher */
+  xl: PropTypes.string,
+  /** sets the distance offset from the left of the column at screen widths of 0px and higher */
+  offsetXs: PropTypes.string,
+  /** sets the distance offset from the left of the column at screen widths of 576px and higher */
+  offsetSm: PropTypes.string,
+  /** sets the distance offset from the left of the column at screen widths of 768px and higher */
+  offsetMd: PropTypes.string,
+  /** sets the distance offset from the left of the column at screen widths of 998px and higher */
+  offsetLg: PropTypes.string,
+  /** sets the distance offset from the left of the column at screen widths of 1200px and higher */
+  offsetXl: PropTypes.string
+};
 
 export default Col;

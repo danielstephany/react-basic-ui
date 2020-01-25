@@ -1,0 +1,172 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { action } from "@storybook/addon-actions";
+import AutoGrid from './AutoGrid.js';
+import Grid from 'components/grid/Grid.js'
+import Container from 'components/container/Container.js';
+import Row from 'components/row/Row.js';
+import Col from 'components/col/Col.js';
+import Paper from 'components/paper/Paper.js';
+import BreakpointsGrid from './BreakpointsGrid.js';
+import InteractiveGridMargin from './InteractiveGridMargin.js';
+import InteractiveGridSpace from './InteractiveGridSpace.js';
+import OffsetGrid from './OffsetGrid.js';
+import SimpleGrid from './SimpleGrid.js';
+import BreakpointsTable from './BreakpointsTable.js';
+
+
+<Meta title="Grid docs" component={Grid} />
+
+## Responsive Break points
+
+Out of the box the grid uses pre defined break points that you can use to rearange your layout for multible screen sizes.
+
+<Story name="Breakpoints Table">
+    <BreakpointsTable />
+</Story>
+
+<br/>
+<br/>
+
+## Automatic column widths
+
+If a width option is not set for a column, the column will grow to the size of its content or fill the remaining space in the row if there is not enough content to fill the row.
+
+<Preview>
+    <Story name="Auto layout">
+        <Grid container>
+            <Grid row>
+                <Grid col>
+                    <Paper className="textc">auto</Paper>
+                </Grid>
+                <Grid col>
+                    <Paper className="textc">auto</Paper>
+                </Grid>
+                <Grid col xs="4">
+                    <Paper className="textc">xs=4</Paper>
+                </Grid>
+                <Grid col>
+                    <Paper className="textc">auto</Paper>
+                </Grid>
+                <Grid col>
+                    <Paper className="textc">auto</Paper>
+                </Grid>
+            </Grid>
+            <Grid row>
+                <Grid col>
+                    <Paper className="textc">auto</Paper>
+                </Grid>
+                <Grid col xs="5">
+                    <Paper className="textc">xs=5</Paper>
+                </Grid>
+                <Grid col>
+                    <Paper className="textc">auto</Paper>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Story>
+</Preview>
+
+<br/>
+<br/>
+
+## Simple grid layout without breakpoints
+
+To Produce a simple responsive grid that maintains the same layout across all screen sizes pass only the <strong>xs</strong> prop to the columns with the desired value.
+
+
+<Preview>
+    <Story name="Basic Grid">
+        <Grid container>
+            <Grid row>
+                <Grid col xs="4"><Paper className="textc">xs=4</Paper></Grid>
+                <Grid col xs="4"><Paper className="textc">xs=4</Paper></Grid>
+                <Grid col xs="4"><Paper className="textc">xs=4</Paper></Grid>
+                <Grid col xs="3"><Paper className="textc">xs=3</Paper></Grid>
+                <Grid col xs="9"><Paper className="textc">xs=9</Paper></Grid>
+                <Grid col xs="12"><Paper className="textc">xs=12</Paper></Grid>
+            </Grid>
+        </Grid>
+    </Story>
+</Preview>
+
+<br/>
+<br/>
+
+## Grid with column offsets
+
+Columns can be shifted over by using the provided offset properties
+
+<Preview>
+    <Story name="Grid with offset columns">
+        <Grid container>
+            <Grid row>
+                <Grid col xs="4" offsetSm="4"><Paper className="textc">xs=4 offsetSm=4</Paper></Grid>
+                <Grid col xs="6" offsetSm="6"><Paper className="textc">xs=4 offsetSm=6</Paper></Grid>
+                <Grid col xs="2"><Paper className="textc">xs=2</Paper></Grid>
+                <Grid col xs="4" offsetSm="6"><Paper className="textc">xs=4 offsetSm=6</Paper></Grid>
+            </Grid>
+        </Grid>
+    </Story>
+</Preview>
+
+<br/>
+<br/>
+
+
+## Grid with breakpoints
+
+Easily create a layout that will rearrange to fit any display by using the built in responsive breakpoints.
+
+<Story name="Breakpoints Grid">
+    <BreakpointsGrid />
+</Story>
+
+<br/>
+<br/>
+
+## Adjustable Vertical Margin of grid containers
+
+Add extra margin to the top and bottom of the grid containers by passing the <strong>vMargin</strong> prop with the desired value.
+
+<Story name="Interactive Grid Margin">
+    <InteractiveGridMargin />
+</Story>
+
+<br/>
+<br/>
+
+## Adjustable Column padding
+
+The padding of the columns can be increased or decreased by passing a value to the <strong>spacing</strong> prop.
+
+<Story name="Interactive Grid Spacing">
+    <InteractiveGridSpace />
+</Story>
+
+<br/>
+<br/>
+
+## Container Props
+
+When Grid is passed the <strong>Container</strong> prop it is then returning the Container component which can use the following props
+
+<Props of={Container} />
+
+<br/>
+<br/>
+
+## Row Props
+
+When Grid is passed the <strong>Row</strong> prop it is then returning the Row component which can use the following props
+
+<Props of={Row} />
+
+<br/>
+<br/>
+
+## Col Props
+
+
+When Grid is passed the <strong>Col</strong> prop it is then returning the Col component which can use the following props
+
+<Props of={Col} />

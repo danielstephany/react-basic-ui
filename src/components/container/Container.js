@@ -23,9 +23,17 @@ const Container = React.forwardRef(function container(props, ref) {
 });
 
 Container.propTypes = {
-    className: PropTypes.string,
-    noGutters: PropTypes.bool,
-    children: PropTypes.any
-}
+  /** Sets when set to false the rows negative left and right margin is removed */
+  noGutters: PropTypes.bool,
+  /** When set to true the container spans the full width of its parent element */
+  stretch: PropTypes.bool,
+  /** sets the margin-top and margin-bottom in pixels to 4 times the specified value  */
+  vMargin: PropTypes.oneOf(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'])
+};
+
+Container.defaultProps = {
+  noGutters: false,
+  stretch: false
+};
 
 export default Container;
